@@ -4,8 +4,17 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+# one: {}
+#   email: test1@test.com 
+#   password: test1234
+
+# two: {}
+#   email: test2@test.com
+#   encrypted_password: test1234
+
+#alternative syntax
+<% 100.times do |n| %>
+user_<%= n %>:
+  email: <%= "user#{n}@test.com" %>
+  encrypted_password: test1234
+<% end %>
