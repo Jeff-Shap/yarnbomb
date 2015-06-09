@@ -1,10 +1,11 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.where(user: current_user)
   end
 
   # GET /projects/1
@@ -24,7 +25,12 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
+
+    #clone project params (in private) to attrs var
+    attrs = project_params().clone
+    #set user_id in attr = to current user
+    attrs[:user_id] = current_user.id
+    @project = Project.new(attrs)
 
     respond_to do |format|
       if @project.save
@@ -69,6 +75,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name)
+      params.require(:project).permit(:name, :user_id)
     end
 end

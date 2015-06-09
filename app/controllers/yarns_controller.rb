@@ -4,7 +4,7 @@ class YarnsController < ApplicationController
   # GET /yarns
   # GET /yarns.json
   def index
-    @yarns = Yarn.all
+    @yarns = Yarn.where(user: current_user)
   end
 
   # GET /yarns/1
@@ -24,8 +24,14 @@ class YarnsController < ApplicationController
   # POST /yarns
   # POST /yarns.json
   def create
-    @yarn = Yarn.new(yarn_params)
 
+    #clone yarn params (in private) to attrs var
+    attrs = yarn_params().clone
+    #set user_id in attr = current user
+    attrs[:user_id] = current_user.id
+    puts "testing"
+    puts attrs
+    @yarn = Yarn.new(attrs)
     respond_to do |format|
       if @yarn.save
         format.html { redirect_to @yarn, notice: 'Yarn was successfully created.' }
@@ -69,6 +75,6 @@ class YarnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def yarn_params
-      params.require(:yarn).permit(:name, :color, :weight, :gauge)
+      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id)
     end
 end

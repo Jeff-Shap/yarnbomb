@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608211931) do
+ActiveRecord::Schema.define(version: 20150609211748) do
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+
+  create_table "skeins", force: :cascade do |t|
+    t.integer  "yardage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "yarn_id"
+  end
+
+  add_index "skeins", ["yarn_id"], name: "index_skeins_on_yarn_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +48,17 @@ ActiveRecord::Schema.define(version: 20150608211931) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "yarns", force: :cascade do |t|
+    t.string   "name"
+    t.string   "color"
+    t.string   "weight"
+    t.float    "gauge"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "yarns", ["user_id"], name: "index_yarns_on_user_id"
 
 end

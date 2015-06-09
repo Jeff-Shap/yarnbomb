@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  resources :projects
+  
+  resources :projects do
+    authenticated :user do
+      get 'new'
+    end
+  end
+  
   resources :yarns
-  get 'home/index'
+  
   root 'home#index'
 
   devise_for :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
