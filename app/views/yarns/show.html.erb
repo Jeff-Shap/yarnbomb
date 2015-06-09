@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yarn.name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @yarn.color %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @yarn.weight %>
+</p>
+
+<p>
+  <strong>Gauge:</strong>
+  <%= @yarn.gauge %>
+</p>
+
+<%= link_to 'Edit', edit_yarn_path(@yarn) %> |
+<%= link_to 'Back', yarns_path %>

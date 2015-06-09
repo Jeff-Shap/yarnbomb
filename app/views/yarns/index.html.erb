@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Yarns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Weight</th>
+      <th>Gauge</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yarns.each do |yarn| %>
+      <tr>
+        <td><%= yarn.name %></td>
+        <td><%= yarn.color %></td>
+        <td><%= yarn.weight %></td>
+        <td><%= yarn.gauge %></td>
+        <td><%= link_to 'Show', yarn %></td>
+        <td><%= link_to 'Edit', edit_yarn_path(yarn) %></td>
+        <td><%= link_to 'Destroy', yarn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yarn', new_yarn_path %>
