@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  
-  resources :projects do
-    authenticated :user do
-      get 'new'
-    end
+
+  authenticated :user do
+    root :to => 'projects#new', as: :authenticated_root
   end
+
+  root 'home#index'
+  
+  resources :projects
   
   resources :yarns
-  
-  root 'home#index'
 
   devise_for :users
 

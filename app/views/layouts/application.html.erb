@@ -10,6 +10,44 @@
 
 <h1> YarnBomb </h1>
 
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+          <button type="button" class="btn btn-default navbar-btn">About</button>
+        </li>
+      <% if user_signed_in? %>
+      <li>Projects Link</li>
+      <li>Yarns Link</li>
+        <li>
+          <ul class="nav nav-pills">
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-default navbar-btn">Profile <span class="caret"></span></button>
+              </a>
+              <ul class="dropdown-menu">
+                <li>Edit Profile</li>
+                <li>Sign Out</li>
+              </ul>
+            </li>
+          </ul>       
+        </li>
+      <% else %>
+        <li>
+          <button type="button" class="btn btn-default navbar-btn">
+            <a href="/users/sign_up">Register</a>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-default navbar-btn">
+            <a href="/users/sign_in">Sign in</a>
+          </button>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
