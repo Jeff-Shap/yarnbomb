@@ -11,14 +11,26 @@
 <h1> YarnBomb </h1>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-left">
+      <li> <button type="button" class="btn btn-default navbar-btn">YARNBOMB</button></li>
+    </ul>
     <ul class="nav navbar-nav navbar-right">
+      <% if notice %>
+      <p class="alert alert-success navbar-text"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger navbar-text"><%= alert %></p>
+    <% end %>
+      <% if user_signed_in? %>
+        <p class="navbar-text">Logged in as <strong><%= current_user.email %></strong></p>
+      <% end %>
       <li>
           <button type="button" class="btn btn-default navbar-btn">About</button>
         </li>
       <% if user_signed_in? %>
-      <li>Projects Link</li>
-      <li>Yarns Link</li>
+      <li><button type="button" class="btn btn-default navbar-btn">Projects</button></li>
+      <li><button type="button" class="btn btn-default navbar-btn">Yarns</button></li>
         <li>
           <ul class="nav nav-pills">
             <li role="presentation" class="dropdown">
@@ -26,8 +38,12 @@
                 <button type="button" class="btn btn-default navbar-btn">Profile <span class="caret"></span></button>
               </a>
               <ul class="dropdown-menu">
-                <li>Edit Profile</li>
-                <li>Sign Out</li>
+                <li>
+                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+                </li>
+                <li>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                </li>
               </ul>
             </li>
           </ul>       
@@ -43,29 +59,11 @@
             <a href="/users/sign_in">Sign in</a>
           </button>
         </li>
+        
       <% end %>
     </ul>
   </div>
 </nav>
-
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-
-<!-- Alert: You have succesfully signed in -->
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-
-<!-- Alert: YOU NEED TO SIGN IN/SIGN UP BEFORE CONTINUING -->
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
 
 
 
