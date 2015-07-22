@@ -2,3 +2,22 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+
+#logo_splash {
+  margin: auto;
+  opacity: 0;
+}
+
+
+#about_button {
+  text-align: center;
+  position: relative;
+  top: 250px;
+  opacity: 0;
+}
+
+#about_container {
+  visibility: hidden;
+}
+

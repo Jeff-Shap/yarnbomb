@@ -1,38 +1,25 @@
-#navnav {
-  background:none;
-}
-
+/* ...
+*= require_self
+*= require_tree .
+*/
 
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: radial-gradient(circle, rgb(250,155,40), rgb(250,230,30), rgb(250,155,40));
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-
-#logo_container {
-  position: relative;
-  top: 180px;
+#navnav {
+  background:none;
 }
 
-#logo_splash {
-  margin: auto;
-  opacity: 0;
-}
-
-
-#about_button {
-  text-align: center;
-  position: relative;
-  top: 250px;
-}
 
 .yb_button {
   background-image: none !important;
@@ -50,6 +37,3 @@ body {
   font-size: 1.5em;
 }
 
-#about_button {
-  opacity: 0;
-}
