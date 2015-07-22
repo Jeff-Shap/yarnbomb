@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YarnBomb2</title>
+  <title>YarnBomb</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" id="navnav">
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-left">
-      <li> <button type="button" class="btn btn-default navbar-btn">YARNBOMB</button></li>
+      <li> <button type="button" class="btn btn-default navbar-btn yb_button"><a href="#">YARNBOMB</a></button></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if notice %>
@@ -23,17 +26,15 @@
       <% if user_signed_in? %>
         <p class="navbar-text">Logged in as <strong><%= current_user.email %></strong></p>
       <% end %>
-      <li>
-          <button type="button" class="btn btn-default navbar-btn">About</button>
-        </li>
+      
       <% if user_signed_in? %>
-      <li><button type="button" class="btn btn-default navbar-btn">Projects</button></li>
-      <li><button type="button" class="btn btn-default navbar-btn">Yarns</button></li>
+      <li><button type="button" class="btn btn-default navbar-btn yb_button">Projects</button></li>
+      <li><button type="button" class="btn btn-default navbar-btn yb_button">Yarns</button></li>
         <li>
           <ul class="nav nav-pills">
             <li role="presentation" class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <button type="button" class="btn btn-default navbar-btn">Profile <span class="caret"></span></button>
+                <button type="button" class="btn btn-default navbar-btn yb_button">Profile <span class="caret"></span></button>
               </a>
               <ul class="dropdown-menu">
                 <li>
@@ -48,12 +49,12 @@
         </li>
       <% else %>
         <li>
-          <button type="button" class="btn btn-default navbar-btn">
+          <button type="button" class="btn btn-default navbar-btn yb_button">
             <a href="/users/sign_up">Register</a>
           </button>
         </li>
         <li>
-          <button type="button" class="btn btn-default navbar-btn">
+          <button type="button" class="btn btn-default navbar-btn yb_button">
             <a href="/users/sign_in">Sign in</a>
           </button>
         </li>
