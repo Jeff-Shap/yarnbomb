@@ -20,12 +20,11 @@
     <br><br>
   </div>
   <div class="row">
-    <div class="col-sm-4 about_steps">
-      
+    <div class="col-sm-4 about_steps" id="about_step1">
         <h2>Step 1: Add Yarn</h2><br><%= image_tag "yarntree.jpg", :class => "img-circle", :id=>"step1_pic"%>
-        <p class="step_text" id="step1_text"><br>Each yarn added includes descriptive information such as color, weight, number of skeins, and yardage per skein</p>
+        <p class="step_text" id="step1_text">Each yarn added includes descriptive information such as color, weight, number of skeins, and yardage per skein</p>
     </div>
-    <div class="col-sm-4 about_steps">
+    <div class="col-sm-4 about_steps" id="about_step2">
       <h2>Step 2: Create a Project</h2>
       
       <p class="step_text" id="step2_text">
@@ -33,14 +32,14 @@
       </p>
       <%= image_tag "newproject.ico", :class => "img-rounded", :id => "step2_pic" %>
     </div>
-    <div class="col-sm-4 about_steps">
+    <div class="col-sm-4 about_steps" id="about_step3">
       <h2>Step 3: Add Yarns to the Project</h2>
       <%= image_tag "projectmgmt.png", :class => "img-circle", :id => "step3_pic" %>
-      <p class="step_text" id="step3_text"><br><br>Select each yarn to be included and input the estimated yardage to be used</p>
+      <p class="step_text" id="step3_text"><br>Select each yarn to be included and input the estimated yardage to be used</p>
     </div>
   </div>
-  <div class="row">
-    Thats all there is too it! YarnBomb helps you manage your yarn inventory across multiple projects, ensuring that you never run out of yarn the night before an item is due to ship (what a nightmare)!
+  <div class="row" id="about_footer">
+    <br><h3>Thats all there is too it! YarnBomb helps you manage your yarn inventory across multiple projects, ensuring that you never run out of yarn the night before an item is due to ship (what a nightmare)!</h3>
   </div>
 </div>
 

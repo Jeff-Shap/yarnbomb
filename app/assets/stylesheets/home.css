@@ -20,7 +20,6 @@
 
 #about_container {
   text-align: center;
-  opacity:0;
   position: relative;
   top: -130px;
 }
@@ -31,17 +30,18 @@
 
 #about_subtext {
   font-size: 2em;
+  opacity: 0;
 }
 
 .about_steps {
   text-align: center;
-  border: 3px solid red;
+  border: 2px dashed rgb(110,70,45);
   border-radius: 15px;
-  width: 30%;
-  height: 322px;
-  margin-left: 3%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 25%;
+  height: 360px;
+  margin-left: 6.1%;
+  padding-top: 1px;
+  padding-bottom: 5px;
   font-size: 1.5em;
 }
 
@@ -49,18 +49,25 @@
   font-size: 1em;
 }
 
+#about_step1 {
+  opacity: 0;
+}
+
 #step1_pic {
   width: 200px; height: 200px;
-  float: left;
-  margin-right:2rem; 
+  float: right;
+  margin-left:2rem; 
   border-radius: 50%;
   -webkit-shape-outside:circle();
   shape-outside:circle();
-  border: 2px dashed blue;
 }
 
 #step1_text {
-  text-align: left;
+  text-align: right;
+}
+
+#about_step2 {
+  opacity: 0;
 }
 
 #step2_pic {
@@ -72,18 +79,25 @@
   text-align: center;
 }
 
+#about_step3 {
+  opacity: 0;
+}
 
 #step3_pic {
   width: 200px; height: 200px;
-  float: right;
-  margin-left:2rem; 
+  float: left;
+  margin-right:2rem; 
   border-radius: 50%;
   -webkit-shape-outside:circle();
   shape-outside:circle();
-  border: 2px dashed blue;
 }
 
 #step3_text {
-  text-align: right;
-  font-size: 1em;
+  text-align: left;
+}
+
+#about_footer {
+  opacity: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }

@@ -8,7 +8,11 @@
     });
     $('.logo_container').fadeTo(1000,0);
     $("html,body").delay(500).animate({scrollTop: 150}, 1000);
-    $("#about_container").delay(1300).animate({opacity: 1.0,}, 1500 );
+    $("#about_subtext").delay(1300).animate({opacity: 1.0,}, 1500 );
+    $("#about_step1").delay(1800).animate({opacity: 1.0,}, 1500 );
+    $("#about_step2").delay(2500).animate({opacity: 1.0,}, 1500 );
+    $("#about_step3").delay(3200).animate({opacity: 1.0,}, 1500 );
+    $("#about_footer").delay(3900).animate({opacity: 1.0,}, 1500 );
   });
 
   
