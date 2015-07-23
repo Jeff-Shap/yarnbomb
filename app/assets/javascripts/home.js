@@ -2,7 +2,7 @@
  $(document).ready(function() {
 
   $("#about_button").click(function() {
-    $(this).animate({'top':'-=400px'}, 1000);
+    $(this).animate({'top':'-=440px'}, 1000);
     $(this).delay(100).animate({
       transform: 'scale(3,3)'
     });

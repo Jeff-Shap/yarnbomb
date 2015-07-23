@@ -16,21 +16,31 @@
 
 <div class="container-fluid" id="about_container" >
   <div class="row">
-    <h2>ABOUT YARNBOMB</h2><br>
-    <p>YarmBomb is the ease-to-use inventory app that yarn enthusiasts across the world have been waiting for. <br>YarnBomb operates on a simple 3-step process: </p>
+    <p id="about_subtext">YarmBomb is the easy-to-use inventory app that yarn enthusiasts across the world have been waiting for. <br><br>YarnBomb operates on a simple 3-step process: </p>
     <br><br>
   </div>
   <div class="row">
     <div class="col-sm-4 about_steps">
-        Step 1: Add Yarn (with descriptive info including weight, color, gauge, number of skeins, and yardage per skein)
+      
+        <h2>Step 1: Add Yarn</h2><br><%= image_tag "yarntree.jpg", :class => "img-circle", :id=>"step1_pic"%>
+        <p class="step_text" id="step1_text"><br>Each yarn added includes descriptive information such as color, weight, number of skeins, and yardage per skein</p>
     </div>
     <div class="col-sm-4 about_steps">
-      Step 2: Create a Project
+      <h2>Step 2: Create a Project</h2>
+      
+      <p class="step_text" id="step2_text">
+        Each project listing includes a project name and an estimated completion date to ensure you are meeting your production goals
+      </p>
+      <%= image_tag "newproject.ico", :class => "img-rounded", :id => "step2_pic" %>
     </div>
     <div class="col-sm-4 about_steps">
-      Step 3: Add Yarns to the Project
-      Thats all there is too it! YarnBomb helps you manage your yarn inventory across multiple projects, ensuring that you never run out of yarn the night before an item is due to ship (what a nightmare)!  
+      <h2>Step 3: Add Yarns to the Project</h2>
+      <%= image_tag "projectmgmt.png", :class => "img-circle", :id => "step3_pic" %>
+      <p class="step_text" id="step3_text"><br><br>Select each yarn to be included and input the estimated yardage to be used</p>
     </div>
+  </div>
+  <div class="row">
+    Thats all there is too it! YarnBomb helps you manage your yarn inventory across multiple projects, ensuring that you never run out of yarn the night before an item is due to ship (what a nightmare)!
   </div>
 </div>
 
