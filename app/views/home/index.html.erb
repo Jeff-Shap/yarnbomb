@@ -1,49 +1,66 @@
 
-<body data-0="background: radial-gradient(circle, rgb(250,155,40), rgb(250,230,30), rgb(250,155,40));" data-140="background: radial-gradient(circle, rgb(250,230,30), rgb(250,155,40), rgb(250,230,30));" >
 
+<!-- SCENE I : BEGIN -->
 <div class="container logo_container" style="position:relative; top:200px;">
   <div class="col-sm-4 col-sm-offset-2">
     <%= image_tag "yb_logo_raw.png", :id => "logo_splash"%>
   </div>
 </div>
+
 <div class="container" id="about_button">
   <div class="row">
-      <button type="button" class="btn btn-default navbar-btn yb_button">About</button>
-    </div>
-    </div>
+    <button type="button" class="btn btn-default navbar-btn yb_button">About</button>
+  </div>
 </div>
+<!-- SCENE I : END -->
 
-
+<!-- SCENE II : BEGIN -->
 <div class="container-fluid" id="about_container" >
+  
   <div class="row">
-    <p id="about_subtext">YarmBomb is the easy-to-use inventory app that yarn enthusiasts across the world have been waiting for. <br><br>YarnBomb operates on a simple 3-step process: </p>
+    <p id="about_subtext">
+      YarmBomb is the easy-to-use inventory app that yarn enthusiasts across the world have been waiting for.<br><br>YarnBomb operates on a simple 3-step process: 
+    </p>
     <br><br>
   </div>
+
   <div class="row">
+
     <div class="col-sm-4 about_steps" id="about_step1">
-        <h2>Step 1: Add Yarn</h2><br><%= image_tag "yarntree.jpg", :class => "img-circle", :id=>"step1_pic"%>
-        <p class="step_text" id="step1_text">Each yarn added includes descriptive information such as color, weight, number of skeins, and yardage per skein</p>
+      <h2>Step 1: Add Yarn</h2><br>
+      <%= image_tag "yarntree.jpg", :class => "img-circle", :id=>"step1_pic"%>
+      <p class="step_text" id="step1_text">
+        Each yarn added includes descriptive information such as color, weight, number of skeins, and yardage per skein
+      </p>
     </div>
+
     <div class="col-sm-4 about_steps" id="about_step2">
       <h2>Step 2: Create a Project</h2>
-      
       <p class="step_text" id="step2_text">
         Each project listing includes a project name and an estimated completion date to ensure you are meeting your production goals
       </p>
       <%= image_tag "newproject.ico", :class => "img-rounded", :id => "step2_pic" %>
     </div>
+
     <div class="col-sm-4 about_steps" id="about_step3">
       <h2>Step 3: Add Yarns to the Project</h2>
       <%= image_tag "projectmgmt.png", :class => "img-circle", :id => "step3_pic" %>
-      <p class="step_text" id="step3_text"><br>Select each yarn to be included and input the estimated yardage to be used</p>
+      <p class="step_text" id="step3_text">
+        <br>Select each yarn to be included and input the estimated yardage to be used
+      </p>
     </div>
-  </div>
+  
+  </div> <!-- 3-step containers -->
+
   <div class="row" id="about_footer">
-    <br><h3>Thats all there is too it! YarnBomb helps you manage your yarn inventory across multiple projects, ensuring that you never run out of yarn the night before an item is due to ship (what a nightmare)!</h3>
+    <h3>
+    <br>Thats all there is too it! YarnBomb helps you manage your yarn inventory across multiple projects, ensuring that you never run out of yarn the night before an item is due to ship (what a nightmare)!
+    </h3>
   </div>
-</div>
+
+</div> <!-- about_container -->
+<!-- SCENE II : END -->
 
 <script type="text/javascript">
   var s = skrollr.init();
 </script>
-</body>

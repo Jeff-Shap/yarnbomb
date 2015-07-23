@@ -16,13 +16,3 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-  
-  $( "#logo_splash" ).delay(400).animate({
-    opacity: 1.0,
-  }, 1500 );
-
-  $( "#about_button" ).delay(1000).animate({
-    opacity: 1.0,
-  }, 1500 );
-});

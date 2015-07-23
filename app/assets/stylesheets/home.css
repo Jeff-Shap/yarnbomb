@@ -3,12 +3,12 @@
   They will automatically be included in application.css.
 */
 
+/*SCENE I : BEGIN*/
 
 #logo_splash {
   margin: auto;
   opacity: 0;
 }
-
 
 #about_button {
   text-align: center;
@@ -18,14 +18,13 @@
   z-index: 100;
 }
 
+
+/*SCENE II : BEGIN*/
+
 #about_container {
   text-align: center;
   position: relative;
   top: -130px;
-}
-
-#about_title {
-  font-size: 3em;
 }
 
 #about_subtext {
