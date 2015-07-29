@@ -55,3 +55,112 @@ body {
   height: auto;
   position: relative;
 }
+
+input[type="text"], input[type="email"], input[type="password"], input[type="password_confirmation"] {
+
+  background-color : rgb(110,70,45); 
+  border: 1px dashed white;
+  color: white;
+
+}
+
+.bubble_text {
+  font-size: 0.8em;
+
+}
+
+#name_bubble 
+{
+display: none;
+padding: 5px !important;
+float: right;
+position: absolute;
+left: 87%;
+top: 55px;
+width: 160px;
+height: 50px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+#name_bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 9px 55px 9px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -9px;
+left: -55px;
+top: 49%;
+}
+
+#email_bubble 
+{
+display: none;
+padding: 5px !important;
+float: right;
+position: absolute;
+left: 87%;
+top: 60px;
+width: 160px;
+height: 105px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+#email_bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 9px 55px 9px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -9px;
+left: -55px;
+top: 49%;
+}
+
+#password_bubble 
+{
+display: none;
+float: right;
+padding: 5px !important;
+position: absolute;
+left: 87%;
+top: 65px;
+width: 160px;
+height: 105px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+#password_bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 9px 55px 9px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -9px;
+left: -55px;
+top: 75%;
+}

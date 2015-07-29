@@ -1,39 +1,74 @@
 $(document).ready(function() {
 
+  // FORM HELPERS
+  $('#user_name').unbind('focusin').bind('focusin',function() {
+    console.log('name - in');
+    $('#name_bubble').css({"display":"inline"});
+  });
+  $('#user_name').unbind('focusout').bind('focusout',function() {
+    console.log('name - out');
+    $('#name_bubble').css({"display":"none"});
+  });
 
-$('#lockdiv').unbind('mouseenter').bind('mouseenter',function(){
-  console.log('open lock');
-  $('#lock-top-pic').animate({'top':'-=20px'}, 1000);
-  $('#lock-bottom-pic').animate({'bottom':'-=210px'}, 1000);
-  $('#privacy_statement').delay(800).animate({opacity: 1.0,}, 1500);
-});
+  $('#user_email').unbind('focusin').bind('focusin',function() {
+    console.log('name - in');
+    $('#email_bubble').css({"display":"inline-block"});
+  });
+  $('#user_email').unbind('focusout').bind('focusout',function() {
+    console.log('name - out');
+    $('#email_bubble').css({"display":"none"});
+  });
 
-$('#lockdiv').unbind('mouseleave').bind('mouseleave',function(){
-  console.log('close lock');
-  $('#privacy_statement').delay(100).animate({opacity: 0,}, 800);
-  $('#lock-top-pic').delay(700).animate({'top':'-=-20px'}, 1000);
-  $('#lock-bottom-pic').delay(700).animate({'bottom':'-=-210px'}, 1000);
-});
+  $('#user_password').unbind('focusin').bind('focusin',function() {
+    console.log('name - in');
+    $('#password_bubble').css({"display":"inline-block"});
+  });
+  $('#user_password').unbind('focusout').bind('focusout',function() {
+    console.log('name - out');
+    $('#password_bubble').css({"display":"none"});
+  });
 
-var i = 0
 
-$('#lockdiv').unbind('click').bind('click',function(){
 
-  if (i%2==0) {
+
+
+
+  // PRIVACY STATEMENT FOR PC
+  $('#lockdiv').unbind('mouseenter').bind('mouseenter',function(){
     $('#lock-top-pic').animate({'top':'-=20px'}, 1000);
     $('#lock-bottom-pic').animate({'bottom':'-=210px'}, 1000);
     $('#privacy_statement').delay(800).animate({opacity: 1.0,}, 1500);
-  }
-  else {
+  });
+
+  $('#lockdiv').unbind('mouseleave').bind('mouseleave',function(){
     $('#privacy_statement').delay(100).animate({opacity: 0,}, 800);
     $('#lock-top-pic').delay(700).animate({'top':'-=-20px'}, 1000);
     $('#lock-bottom-pic').delay(700).animate({'bottom':'-=-210px'}, 1000);
-  }
-
-  i = i + 1;
+  });
 
   
 
-});
+  // PRIVACY STATEMENT FOR MOBILE
+  var i = 0
+
+  $('#lockdiv').unbind('click').bind('click',function(){
+    if (i%2==0) {
+      $('#lock-top-pic').animate({'top':'-=20px'}, 1000);
+      $('#lock-bottom-pic').animate({'bottom':'-=210px'}, 1000);
+      $('#privacy_statement').delay(800).animate({opacity: 1.0,}, 1500);
+    }
+    else {
+      $('#privacy_statement').delay(100).animate({opacity: 0,}, 800);
+      $('#lock-top-pic').delay(700).animate({'top':'-=-20px'}, 1000);
+      $('#lock-bottom-pic').delay(700).animate({'bottom':'-=-210px'}, 1000);
+    }
+
+  i = i + 1;
+  });
+
+
+
+
+
 
 });

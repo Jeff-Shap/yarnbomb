@@ -8,23 +8,35 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
         <div class="field">
-          <%= label_tag("Name") %><br />
-          <%= text_field_tag(:name) %>
+          <div>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+          </div>
+          <div class="bubble" id="name_bubble"><span class="bubble_text">How would you like us to address you?</span></div>
         </div>
         <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
+          <div>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+        <div class="bubble" id="email_bubble"><span class="bubble_text">Please provide a valid email address. This will be used to log in to YarnBomb, as well as reset your password, should you forget it.</span></div>
         </div>
         <div class="field">
+          <div>
           <%= f.label :password %>
           <% if @validatable %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
+        
+            
+          <% end %>
           <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+          <div class="bubble" id="password_bubble"><span class="bubble_text">Passwords must be at least 8 characters long. Please do not use the password for your provided email as your YarnBomb password.</span></div>
         </div>
         <div class="field">
-          <%= f.label :password_confirmation %><br />
+          <div>
+          <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
         </div>
         <div class="actions">
           <%= f.submit "Sign up" %>
@@ -48,6 +60,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 <span>Already registered? </span><%= render "devise/shared/links" %>
