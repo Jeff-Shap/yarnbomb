@@ -1,7 +1,11 @@
 <%= stylesheet_link_tag "register.css" %>
-<h2>Register</h2>
+<%= javascript_include_tag "register.js" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="container" style="text-align:center">
+  <div class="row">
+    <div class="col-sm-6" style="border: 1px solid red;">
+      <h2>Register</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
@@ -26,5 +30,21 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+    </div>
+    <div class="col-sm-6" style="border: 1px solid red;">
+      <h3>Privacy Policy</h3>
+      <div id="lock-pic">
+      <div class="row" id="lock-top-row">
+        <%= image_tag "lock-icon.png", :id => "lock-top-pic"%>
+      </div>
+      <div class="row" id="lock-bottom-row">
+        <%= image_tag "lock-bottom.png", :id => "lock-bottom-pic"%>
+      </div>
+      </div>
+      <p id="privacy_statement">
+      At YarnBomb, your privacy is important to us. We treat your registration information as we would our own, and promise never to sell or disclose it to any 3rd party affliates. This includes (but is not limited to) those annoying robo-call advertising agencies, spam-emailing lists informing you of your inherited riches in Kenya, foreign governments, the NSA, and the 7th Day Adventists (stop knocking on my door at 8 AM on Saturday morning!). We will do our very best to protect against cyber intrusions, and will inform you post-haste should such an issue occur. YarnBomb will never ask for any form of payment or contact information (with the exception of your email address for registration and sign-in purposes). Please do not use your listed email address's password as your YarnBomb password. 
+      </p>
+</div>
 
-<%= render "devise/shared/links" %>
+
+<span>Already registered? </span><%= render "devise/shared/links" %>

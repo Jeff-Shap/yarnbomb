@@ -1,0 +1,37 @@
+body {
+  position: relative;
+  top: 150px;
+}
+
+#privacy_statement {
+  visibility: hidden;
+}
+
+
+#lock-top-row {
+
+}
+
+#lock-pic {
+  margin: 5px;
+  padding: 10px;
+  width: 250px;
+  position: relative;
+  left: 28%;
+
+}
+
+
+#lock-top-pic {
+  width: 200px;
+  height: auto;
+}
+
+
+#lock-bottom-row {
+}
+
+#lock-bottom-pic {
+  width: 200px;
+  height: auto;
+}
