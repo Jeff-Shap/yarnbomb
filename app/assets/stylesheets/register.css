@@ -4,21 +4,22 @@ body {
 }
 
 #privacy_statement {
-  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  top: -160px;
+  left: 11%;
+  z-index: -100;
+  border: 1px dashed red;
 }
 
+#lockdiv {
+  position: relative;
+  left: 31%;
+  top: 20px;
+  z-index: 100;
+}
 
 #lock-top-row {
-
-}
-
-#lock-pic {
-  margin: 20px;
-  padding: 20px;
-  width: 250px;
-  position: relative;
-  left: 28%;
-  border: 1px solid red;
 
 }
 
@@ -26,6 +27,7 @@ body {
 #lock-top-pic {
   width: 200px;
   height: auto;
+  position: relative;
 }
 
 
@@ -35,4 +37,5 @@ body {
 #lock-bottom-pic {
   width: 200px;
   height: auto;
+  position: relative;
 }
