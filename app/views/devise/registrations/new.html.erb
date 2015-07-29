@@ -8,6 +8,10 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
         <div class="field">
+          <%= label_tag("Name") %><br />
+          <%= text_field_tag(:name) %>
+        </div>
+        <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true %>
         </div>
@@ -31,7 +35,7 @@
       <div class="row">
         <div class="col-sm-5" id="lockdiv">
           <%= image_tag "lock-icon.png", :id => "lock-top-pic"%>
-          <%= image_tag "lock-bottom2.png", :id => "lock-bottom-pic"%>
+          <%= image_tag "lock-bottom3.png", :id => "lock-bottom-pic"%>
         </div>
       </div>
       <div class="row">

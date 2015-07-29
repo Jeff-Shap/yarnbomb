@@ -8,13 +8,24 @@ body {
   top: 60px;
 }
 
+#registerform h2 {
+  color: rgb(110,70,45);
+}
+
+.field label, .field em {
+  color: rgb(110,70,45);
+}
+
 #privacy_statement {
   opacity: 0;
   position: relative;
-  top: -110px;
+  top: -120px;
   text-align: justify;
   z-index: -100;
-  border: 1px dashed red;
+  background-color: rgba(110,70,45,0.4);
+  border-radius: 5px;
+  color: white;
+  padding: 4px;
 }
 
 #lockdiv {
