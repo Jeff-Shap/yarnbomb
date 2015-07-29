@@ -3,51 +3,46 @@
 
 <div class="container" style="text-align:center">
   <div class="row">
-    <div class="col-sm-6" style="border: 1px solid red;">
+    <div class="col-sm-5 col-sm-offset-1" id="registerform" >
       <h2>Register</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <%= devise_error_messages! %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @validatable %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+        <% end %>
     </div>
-    <div class="col-sm-6" style="border: 1px solid red;">
-      <div class="row">
-        <h3>Privacy Policy</h3>
-      </div>
+    <div class="col-sm-5">
       <div class="row">
         <div class="col-sm-5" id="lockdiv">
-        <%= image_tag "lock-icon.png", :id => "lock-top-pic"%>
-        <%= image_tag "lock-bottom.png", :id => "lock-bottom-pic"%>
-      </div>
+          <%= image_tag "lock-icon.png", :id => "lock-top-pic"%>
+          <%= image_tag "lock-bottom2.png", :id => "lock-bottom-pic"%>
+        </div>
       </div>
       <div class="row">
-        <div class="col-sm-10">
-      <p id="privacy_statement">
-      At YarnBomb, your privacy is important to us. We treat your registration information as we would our own, and promise never to sell or disclose it to any 3rd party affliates. This includes (but is not limited to) those annoying robo-call advertising agencies, spam-emailing lists informing you of your inherited riches in Kenya, foreign governments, the NSA, and the 7th Day Adventists (stop knocking on my door at 8 AM on Saturday morning!). We will do our very best to protect against cyber intrusions, and will inform you post-haste should such an issue occur. YarnBomb will never ask for any form of payment or contact information (with the exception of your email address for registration and sign-in purposes). Please do not use your listed email address's password as your YarnBomb password. 
-      </p>
+        <div class="col-sm-12">
+          <p id="privacy_statement">
+            At YarnBomb, your privacy is important to us. We treat your registration information as we would our own, and promise never to sell or disclose it to any 3rd party affliates. This includes (but is not limited to) those annoying robo-call advertising agencies, spam-emailing lists informing you of your inherited riches in Kenya, foreign governments, the NSA, and the 7th Day Adventists (stop knocking on my door at 8 AM on Saturday morning!). We will do our very best to protect against cyber intrusions, and will inform you post-haste should such an issue occur. YarnBomb will never ask for any form of payment or contact information (with the exception of your email address for registration and sign-in purposes). Please do not use your listed email address's password as your YarnBomb password. 
+          </p>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
 </div>
 
 
