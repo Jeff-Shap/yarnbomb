@@ -14,6 +14,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
+    background: radial-gradient(circle, rgb(250,155,40), rgb(250,230,30), rgb(250,155,40));
 }
 
 #navnav {
