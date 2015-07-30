@@ -1,4 +1,19 @@
 
+
+var i = 1;                     //  set your counter to 1
+
+ function myLoop () {           //  create a loop function
+   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+      console.log('looping' + i);
+      $('#reg_button').toggleClass("flash");          //  your code here
+      i = i + 1;                     //  increment the counter
+      if (i < 10) {            //  if the counter < 10, call the loop function
+         myLoop();             //  ..  again which will trigger another 
+      }                        //  ..  setTimeout()
+   }, 2000)
+}
+
+
  $(document).ready(function() {
 
   $( "#logo_splash" ).delay(400).animate({
@@ -10,14 +25,21 @@
   $("#about_button").click(function() {
     $(this).animate({'top':'-=440px'}, 1000);
     $("#aboutbutton").delay(1000).animate({transform: 'scale(2.5,2.5)'});
-    $('.logo_container').fadeTo(1000,0);
+    $(".logo_container").fadeTo(1000,0);
     $("html,body").delay(500).animate({scrollTop: 150}, 1000);
-    $("#about_subtext").delay(1300).animate({opacity: 1.0,}, 1500 );
-    $("#about_step1").delay(1800).animate({opacity: 1.0,}, 1500 );
-    $("#about_step2").delay(2500).animate({opacity: 1.0,}, 1500 );
-    $("#about_step3").delay(3200).animate({opacity: 1.0,}, 1500 );
-    $("#about_footer").delay(3900).animate({opacity: 1.0,}, 1500 );
-  });
+    $("#about_subtext").delay(1800).animate({opacity: 1.0,}, 1500 );
+    $("#about_step1").delay(4500).animate({opacity: 1.0,}, 1500 );
+    $("#about_step2").delay(6500).animate({opacity: 1.0,}, 1500 );
+    $("#about_step3").delay(8500).animate({opacity: 1.0,}, 1500 );
+    $("#about_footer").delay(17000).animate({opacity: 1.0,}, 1500 );
+    $("#arrow_icon_div").delay(20000).animate({width: 290, opacity: 1,}, 1500 );
+    window.setInterval(function(){
+      myLoop();
+      }, 23000);
+
+    
+
+    });
 
   
 

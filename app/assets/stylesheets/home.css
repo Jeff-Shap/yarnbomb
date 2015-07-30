@@ -102,8 +102,20 @@
   width: 95%;
 }
 
-#arrow_icon {
-  position: absolute;
-  width: 20%;
+#arrow_icon_div {
+  width: 0px;
   height: 60px;
+  position: relative;
+  float: left;
+  top: -50px;
+  left: 83%;
+  opacity: 0;
 }
+
+#arrow_icon {
+  width: 100%;
+  height: 100%;
+}
+
+
+
