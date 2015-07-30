@@ -36,17 +36,17 @@ $(document).ready(function() {
 
 
   // PRIVACY STATEMENT FOR PC
-  $('#lockdiv').unbind('mouseenter').bind('mouseenter',function(){
-    $('#lock-top-pic').animate({'top':'-=20px'}, 1000);
-    $('#lock-bottom-pic').animate({'bottom':'-=210px'}, 1000);
-    $('#privacy_statement').delay(800).animate({opacity: 1.0,}, 1500);
-  });
+  // $('#lockdiv').unbind('mouseenter').bind('mouseenter',function(){
+  //   $('#lock-top-pic').animate({'top':'-=20px'}, 1000);
+  //   $('#lock-bottom-pic').animate({'bottom':'-=210px'}, 1000);
+  //   $('#privacy_statement').delay(800).animate({opacity: 1.0,}, 1500);
+  // });
 
-  $('#lockdiv').unbind('mouseleave').bind('mouseleave',function(){
-    $('#privacy_statement').delay(800).animate({opacity: 0,}, 800);
-    $('#lock-top-pic').delay(1800).animate({'top':'-=-20px'}, 1000);
-    $('#lock-bottom-pic').delay(1800).animate({'bottom':'-=-210px'}, 1000);
-  });
+  // $('#lockdiv').unbind('mouseleave').bind('mouseleave',function(){
+  //   $('#privacy_statement').delay(800).animate({opacity: 0,}, 800);
+  //   $('#lock-top-pic').delay(1800).animate({'top':'-=-20px'}, 1000);
+  //   $('#lock-bottom-pic').delay(1800).animate({'bottom':'-=-210px'}, 1000);
+  // });
 
   
 

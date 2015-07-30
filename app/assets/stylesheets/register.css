@@ -3,6 +3,11 @@ body {
   top: 150px;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(110,70,45) inset;
+    -webkit-text-fill-color: white !important;
+}
+
 .reg_header {
   font-size: 4em;
   color: rgb(110,70,45);
