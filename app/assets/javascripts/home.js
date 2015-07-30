@@ -9,7 +9,7 @@
 
   $("#about_button").click(function() {
     $(this).animate({'top':'-=440px'}, 1000);
-    $("#aboutbutton").delay(1000).animate({transform: 'scale(3,3)'});
+    $("#aboutbutton").delay(1000).animate({transform: 'scale(2.5,2.5)'});
     $('.logo_container').fadeTo(1000,0);
     $("html,body").delay(500).animate({scrollTop: 150}, 1000);
     $("#about_subtext").delay(1300).animate({opacity: 1.0,}, 1500 );

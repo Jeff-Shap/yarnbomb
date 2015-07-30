@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav navbar-left">
         <li> 
           <button type="button" class="btn btn-default navbar-btn yb_button">
-          <a href="#">YARNBOMB</a></button>
+          <%=link_to image_tag("navbar_logo.png"), root_path%></button>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -41,12 +41,13 @@
               </li>
             
         <% else %>
+        <li><button type="button" class="btn btn-default navbar-btn yb_button">
+            <a href="/users/sign_in">Sign in</a></button>
+          </li>
           <li><button type="button" class="btn btn-default navbar-btn yb_button">
             <a href="/users/sign_up">Register</a></button>
           </li>
-          <li><button type="button" class="btn btn-default navbar-btn yb_button">
-            <a href="/users/sign_in">Sign in</a></button>
-          </li>
+          
         <% end %>
       </ul>
     </div>

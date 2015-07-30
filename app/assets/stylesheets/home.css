@@ -24,11 +24,11 @@
 #about_container {
   text-align: center;
   position: relative;
-  top: -250px;
+  top: -300px;
 }
 
 #about_subtext {
-  font-size: 2em;
+  font-size: 1.8em;
   opacity: 0;
 }
 
@@ -99,4 +99,11 @@
   opacity: 0;
   margin-left: 10px;
   margin-right: 10px;
+  width: 95%;
+}
+
+#arrow_icon {
+  position: absolute;
+  width: 20%;
+  height: 60px;
 }

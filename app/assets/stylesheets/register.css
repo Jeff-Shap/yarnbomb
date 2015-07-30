@@ -70,12 +70,10 @@ label {
   position: relative;
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="password_confirmation"] {
-
-  background-color : rgb(110,70,45); 
+input {
+  background-color : rgb(110,70,45) !important; 
   border: 1px solid white;
   color: white;
-
 }
 
 .bubble_text {

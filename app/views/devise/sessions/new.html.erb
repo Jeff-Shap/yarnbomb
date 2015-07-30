@@ -13,8 +13,8 @@
       <div class="col-sm-2 col-sm-offset-3" style="text-align:right;">
         <%= f.label :email, "Email:" %>
       </div>
-      <div class="col-sm-6 reg_formfield">
-        <%= f.email_field :email, autofocus: true %>
+      <div class="col-sm-6 signin_formfield">
+        <%= f.email_field :email, :style => "background-color:red !important" %>
       </div>
     </div>
   </div>
@@ -23,8 +23,8 @@
       <div class="col-sm-2 col-sm-offset-3" style="text-align:right">
         <%= f.label :password, "Password:" %>
       </div>
-      <div class="col-sm-6 reg_formfield">
-        <%= f.password_field :password, autocomplete: "off"%>
+      <div class="col-sm-6 signin_formfield">
+        <%= f.password_field :password, :autocomplete => 'off' %>
       </div>
     </div>
   </div>
