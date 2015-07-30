@@ -1,0 +1,35 @@
+.next_tutorial_icon {
+  width: 120px;
+  height: auto;
+}
+
+
+  #step_1_arrow {
+    float: right;
+    position: relative;
+    top: -80px;
+
+  }
+
+  #getstart_banner {
+    width: 0px;
+    position: relative;
+    right: 20%;
+  }
+
+  #getstart_inside {
+    width: 330px;
+  }
+
+  #thanks_banner {
+    position: relative;
+    left: 80%;
+    top: -50px;
+    overflow: hidden;
+    width: 0px;
+  }
+
+  #thanks_inside {
+    width: 400px;
+    height: auto;
+  }

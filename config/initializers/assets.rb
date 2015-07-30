@@ -12,3 +12,5 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( register.css )
 Rails.application.config.assets.precompile += %w( register.js )
+Rails.application.config.assets.precompile += %w( tutorial.css )
+Rails.application.config.assets.precompile += %w( tutorial.js )
