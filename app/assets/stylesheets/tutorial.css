@@ -4,12 +4,15 @@
 .next_tutorial_icon {
   width: 120px;
   height: auto;
+
   }
 
 .scene {
   border: 1px solid red !important;
   position: relative;
   height: 600px;
+  width: 95%;
+  margin: auto
   }
 
 /*SCENE I*/
@@ -54,7 +57,7 @@
 
 #scene2 {
   position: relative;
-  left: 85%;
+  left: 100%;
   top: -620px;
 }
 
