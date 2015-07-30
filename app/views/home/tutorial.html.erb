@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag "tutorial.css" %>
 <%= javascript_include_tag "tutorial.js" %>
-<div class="container">
+
+
+
+<!-- BEGIN: SCENE I-->
+<div class="container scene" id="scene1">
   <div class="row" id="thanks_banner">
     <div id="thanks_inside">
     <h2>
@@ -14,9 +18,33 @@
   </div>
   </div>
 </div>
+<!-- END: SCENE I-->
+
+
+<!-- BEGIN: SCENE II -->
+<div class="container scene" id="scene2">
+  <div class="row" id="navigation_banner">
+    <h2>Navigation</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      There are three primary navigation buttons
+    </div>
+  </div>
+</div>
 
 
 
 
 
 
+<script type="text/javascript">
+  window.setTimeout(function() {
+    $('#getstart_inside').animate({opacity:1,});
+  }, 5000);
+  
+  
+  $('#thanks_banner').animate({width: 400, "left":"-1%",}, 2000);
+  
+  $('#getstart_banner').delay(4000).animate({width: 500, "right":"-35%",}, 2000);
+</script>

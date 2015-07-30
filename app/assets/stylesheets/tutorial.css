@@ -1,40 +1,63 @@
+
+
+
 .next_tutorial_icon {
   width: 120px;
   height: auto;
+  }
+
+.scene {
+  border: 1px solid red !important;
+  position: relative;
+  height: 600px;
+  }
+
+/*SCENE I*/
+/*PRE-JS POSITIONG*/
+
+#thanks_banner {
+  position: relative;
+  left: 80%;
+  top: -10px;
+  overflow: hidden; 
+  width: 0px;
+  }
+
+#thanks_inside {
+  width: 400px;
+  height: auto;
+  }
+
+#getstart_banner {
+  width: 0px;
+  position: relative;
+  right: 10%;
+  top: 130px;
+  overflow: hidden;
+  }
+
+#getstart_inside {
+  position: relative;
+  top: 30px;
+  width: 330px;
+  opacity: 0;
+  }
+
+#step_1_arrow {
+  float: right;
+  position: relative;
+  top: -50px;
+  }
+
+
+/*SCENE II PRE-STEP1ARROW EVENT POSITIONING*/
+
+#scene2 {
+  position: relative;
+  left: 85%;
+  top: -620px;
 }
 
-
-  #step_1_arrow {
-    float: right;
-    position: relative;
-    top: -50px;
-
-  }
-
-  #getstart_banner {
-    width: 0px;
-    position: relative;
-    right: 10%;
-    top: 130px;
-    overflow: hidden;
-  }
-
-  #getstart_inside {
-    position: relative;
-    top: 30px;
-    width: 330px;
-    opacity: 0;
-  }
-
-  #thanks_banner {
-    position: relative;
-    left: 80%;
-    top: -10px;
-    overflow: hidden; 
-    width: 0px;
-  }
-
-  #thanks_inside {
-    width: 400px;
-    height: auto;
-  }
+#navigation_banner {
+  opacity: 0.5;
+}
