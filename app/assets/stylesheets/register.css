@@ -3,6 +3,10 @@ body {
   top: 150px;
 }
 
+#reg_header {
+  font-size: 4em;
+}
+
 #registerform {
   position: relative;
   top: 60px;
@@ -14,6 +18,10 @@ body {
 
 .field label, .field em {
   color: rgb(110,70,45);
+}
+
+label {
+  font-size: 1.5em;
 }
 
 #privacy_statement {
@@ -59,24 +67,42 @@ body {
 input[type="text"], input[type="email"], input[type="password"], input[type="password_confirmation"] {
 
   background-color : rgb(110,70,45); 
-  border: 1px dashed white;
+  border: 1px solid white;
   color: white;
 
 }
 
 .bubble_text {
   font-size: 0.8em;
+  color: white;
+}
 
+div.field > div {
+  padding-right: 0px;
+}
+
+.reg_formfield input{
+  float: left !important; 
+}
+
+.reg_form_row {
+  margin-bottom: 15px;
+}
+
+#user_password_confirmation {
+  position: relative;
+  left: -5%;
 }
 
 #name_bubble 
 {
 display: none;
 padding: 5px !important;
+background-color: rgba(110,70,45,0.6) !important;
 float: right;
 position: absolute;
-left: 87%;
-top: 55px;
+left: 83%;
+top: 90px;
 width: 160px;
 height: 50px;
 padding: 0px;
@@ -88,12 +114,13 @@ border-radius: 5px;
 
 #name_bubble:after 
 {
+
 content: '';
 position: absolute;
 border-style: solid;
 border-width: 9px 55px 9px 0;
-border-color: transparent #FFFFFF;
-display: block;
+border-color: transparent rgba(110,70,45,0.6);
+display: block !important;
 width: 0;
 z-index: 1;
 margin-top: -9px;
@@ -103,12 +130,13 @@ top: 49%;
 
 #email_bubble 
 {
+  background-color: rgba(110,70,45,0.6) !important;
 display: none;
 padding: 5px !important;
 float: right;
 position: absolute;
-left: 87%;
-top: 60px;
+left: 83%;
+top: 103px;
 width: 160px;
 height: 105px;
 padding: 0px;
@@ -124,7 +152,7 @@ content: '';
 position: absolute;
 border-style: solid;
 border-width: 9px 55px 9px 0;
-border-color: transparent #FFFFFF;
+border-color: transparent rgba(110,70,45,0.6);
 display: block;
 width: 0;
 z-index: 1;
@@ -135,12 +163,13 @@ top: 49%;
 
 #password_bubble 
 {
+  background-color: rgba(110,70,45,0.6) !important;
 display: none;
 float: right;
 padding: 5px !important;
 position: absolute;
-left: 87%;
-top: 65px;
+left: 83%;
+top: 110px;
 width: 160px;
 height: 105px;
 padding: 0px;
@@ -156,7 +185,7 @@ content: '';
 position: absolute;
 border-style: solid;
 border-width: 9px 55px 9px 0;
-border-color: transparent #FFFFFF;
+border-color: transparent rgba(110,70,45,0.6);
 display: block;
 width: 0;
 z-index: 1;
