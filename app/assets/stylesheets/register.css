@@ -3,8 +3,9 @@ body {
   top: 150px;
 }
 
-#reg_header {
+.reg_header {
   font-size: 4em;
+  color: rgb(110,70,45);
 }
 
 #registerform {
@@ -16,8 +17,13 @@ body {
   color: rgb(110,70,45);
 }
 
-.field label, .field em {
+.field label, .field em, #rem_me_label {
   color: rgb(110,70,45);
+}
+
+#user_remember_me {
+  position: relative;
+  top: -3px;
 }
 
 label {
