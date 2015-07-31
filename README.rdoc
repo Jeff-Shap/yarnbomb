@@ -2,9 +2,9 @@
 
 Coming soon, the world's most comprehensive inventory app for yarn enthusiasts.
 
-* Inventory your yarn
+* Inventory your entire collection of Yarn
 
-* Manage current and ongoing projects, including completion date, estimated types and amounts of yarn to be used, etc.
+* Manage current and ongoing Projects, including completion date, estimated types and amounts of yarn to be used, etc.
 
-* Create custom inventory alerts and reports (YarnBomb v 2.0)
+* Create custom inventory Alerts and Reports (YarnBomb v 2.0)
 
