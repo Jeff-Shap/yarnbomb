@@ -17,6 +17,7 @@ $(document).ready(function() {
       $('#thanks_banner').animate({"left":"-100%"}, 3000);
       $('#scene1').delay(2000).animate({"right":"100%"}, 1);
       $('#scene2').delay(2000).animate({"left":"0%"}, 1);
+      $('#tutorial_banner').delay(3000).animate({"width":"50%", "right":"30%"}, 2000);
 
     },1);
 

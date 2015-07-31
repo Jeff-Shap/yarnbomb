@@ -61,6 +61,63 @@
   top: -620px;
 }
 
-#navigation_banner {
-  opacity: 0.5;
+#tutorial_banner {
+  width: 0;
+  float: right;
+  position: relative;
+}
+
+#tut_banner_inner {
+  border: 1px solid red;
+  overflow: hidden;
+  width: 20%;
+  position: relative;
+  left: 45%;
+  
+}
+
+#nav_ex_row {
+  position: relative;
+  top: 40px;
+}
+
+.category_header {
+  text-align: center;
+}
+
+.navcolumn {
+  height: 400px;
+  border: 1px dashed red;
+}
+
+.ex_nav_icon {
+  width: 200px;
+  height: auto;
+  position: relative;
+  left: 27%;
+}
+
+#proj_ex_icon, #report_ex_icon {
+  width: 170px;
+  top: 20px;
+}
+
+#report_ex_icon {
+  left: 32%;
+}
+
+#nav_ex_footer {
+  position: relative;
+  top: 100px;
+}
+
+
+.nav_desc {
+  position: relative;
+  top: 60px;
+  text-align: center;
+}
+
+#yarn_desc {
+  top: 20px;
 }
