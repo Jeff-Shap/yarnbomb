@@ -42,10 +42,11 @@
             
         <% else %>
         <li><button type="button" class="btn btn-default navbar-btn yb_button">
-            <a href="/users/sign_in">Sign in</a></button>
+            <%= link_to "Sign In", new_user_session_path %>
+            </button>
           </li>
           <li><button type="button" class="btn btn-default navbar-btn yb_button" id="reg_button">
-            <a href="/users/sign_up">Register</a></button>
+            <%= link_to "Register", new_user_registration_path %></button>
           </li>
           
         <% end %>
