@@ -28,41 +28,40 @@
       Tutorial
     </h2>
   </div>
-  <div class="row">
-    YarnBomb is broken into three divisions:
+  <div class="row" id="tut_subhead">
+    <div id="tut_subhead_inner">
+      YarnBomb is broken into three divisions, each of which has a cooresponding icon on the nav bar at the top of your screen:
+    </div>
   </div>
   <div class="row" id="nav_ex_row">
+
     <div class="col-md-4 navcolumn">
-      <div class="row category_header">
-        <h3>YARNS</h3>
-      </div>
       <div class="row">
         <%=image_tag "yarn_nav_icon.png", :class => "ex_nav_icon", :id => "yarn_ex_icon"%>
       </div>
-      <div class="row nav_desc" id="yarn_desc">
-        YARN DESCRIPTION HERE
+      <div class="row category_header" id="yarn_head">
+        <h3 class="popout">YARNS</h3>
+        <p class="popout">Yarn Description</p>
       </div>
     </div>
+
     <div class="col-md-4 navcolumn">
-      <div class="row category_header">
-        <h3>PROJECTS</h3>
-      </div>
       <div class="row">
         <%=image_tag "newproject.ico", :class => "ex_nav_icon", :id => "proj_ex_icon"%>
       </div>
-      <div class="row nav_desc">
-        PROJECT DESCRIPTION HERE
+      <div class="row category_header" id="proj_head">
+        <h3 class="popout">PROJECTS</h3>
+        <p class="popout">PROJECT DESCRIPTION HERE</p>
       </div>
     </div>
+
     <div class="col-md-4 navcolumn">
-      <div class="row category_header">
-        <h3>REPORTS</h3>
-      </div>
       <div class="row">
         <%=image_tag "report_nav_icon.png", :class => "ex_nav_icon", :id => "report_ex_icon" %>
       </div>
-      <div class="row nav_desc">
-        REPORT DESCRIPTION HERE
+      <div class="row category_header" id="report_head">
+        <h3 class="popout">REPORTS</h3>
+        <p class="popout">REPORT DESCRIPTION HERE<p>
       </div>
     </div>
   </div>
@@ -78,10 +77,11 @@
 
 <script type="text/javascript">
   window.setTimeout(function() {
-    $('#getstart_inside').animate({opacity:1,});
-  }, 3000);
   
   $('#thanks_banner').animate({width: 400, "left":"5%",}, 2000);
   
   $('#getstart_banner').delay(2000).animate({width: 500, "right":"-35%",}, 2000);
+
+  $('#getstart_inside').delay(2500).animate({opacity:1,}, 2000);
+});
 </script>
