@@ -58,7 +58,7 @@
 #scene2 {
   position: relative;
   left: 100%;
-  top: -620px;
+  top: -650px;
 }
 
 #tutorial_banner {
@@ -79,7 +79,7 @@
 
 #tut_subhead {
   position: relative;
-  top: 75px;
+  top: 55px;
   width: 0%;
   height: 40px;
   overflow: hidden;
@@ -94,14 +94,14 @@
 
 #nav_ex_row {
   position: relative;
-  top: 100px;
+  top: 60px;
 }
 
 .category_header {
   text-align: center;
   position: relative;
   top: 150px;
-  border: 2px solid green;
+  border: 2px solid white;
   border-radius: 5px;
   width: 0%;
   margin: auto;
@@ -113,6 +113,19 @@
 
 .popout {
   opacity: 0;
+  width: 95%;
+  margin: auto;
+  position: relative;
+  top: 15px;
+}
+
+.popout_desc {
+  top: 210px !important;
+  font-size: 1.3em;
+}
+
+#proj_head > .popout_desc {
+  top: 230px !important;
 }
 
 .category_header > p {
@@ -123,6 +136,11 @@
 .navcolumn {
   height: 400px;
   float: left;
+}
+
+.navcolumn > .row {
+  background-color: rgba(110,70,45,0.6);
+  color: white;
 }
 
 .ex_nav_icon {
@@ -147,14 +165,32 @@
 }
 
 
+
 #nav_ex_footer {
   text-align: center;
   font-size: 1.5em;
   position: relative;
-  top: 70px;
+  top: 100px;
   opacity: 0;
 }
 
+#next_step {
+  position: relative;
+  top: 130px;
+  text-align: center;
+  font-size: 1.3em;
 
+}
+
+
+#step_2_arrow {
+
+  width: 50px;
+  height: auto;
+  float: right;
+  position: relative;
+  top: -17px;
+  left: -33%;
+  }
 
 
