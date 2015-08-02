@@ -16,12 +16,12 @@ var i = 1;
 
  $(document).ready(function() {
 
-  // Added sign-in/register info bubbles (COMMENT OUT FOR FINAL PRODUCTION)
+  // Added sign-in/register info bubbles (DELETE FINAL PRODUCTION)
   $('.temp_index_deactivate').click(function() {
-    console.log('click');
-    $('.temp_bubble').animate({opacity:1}, 1000);
-    $('.temp_bubble').delay(2000).animate({opacity:0}, 1000);
+    $('.temp_bubble1').animate({opacity:1}, 1000);
+    $('.temp_bubble1').delay(2000).animate({opacity:0}, 1000);
   });
+  // END INFO BUBBLES
 
   $( "#logo_splash" ).delay(400).animate({
     opacity: 1.0,}, 1500 );
@@ -30,6 +30,16 @@ var i = 1;
     opacity: 1.0,}, 1500 );
 
   $("#about_button").click(function() {
+    // Reposition info bubbles (DELETE FOR FINAL PRODUCTION)
+    $('.temp_bubble1').stop();
+    $('.temp_bubble1').animate({opacity:0}, 1);
+    $('.temp_index_deactivate').unbind('click').bind('click',function() {
+      $('.temp_bubble1').animate({"top":"-630px"},1);
+      $('.temp_bubble1').delay(100).animate({opacity:1}, 1000);
+      $('.temp_bubble1').delay(2000).animate({opacity:0}, 1000);
+    });
+    // END INFO BUBBLE
+
     $(this).animate({'top':'-=440px'}, 1000);
     $("#aboutbutton").delay(1000).animate({transform: 'scale(2.5,2.5)'});
     $(".logo_container").fadeTo(1000,0);
@@ -40,6 +50,7 @@ var i = 1;
     $("#about_step3").delay(8500).animate({opacity: 1.0,}, 1500 );
     $("#about_footer").delay(17000).animate({opacity: 1.0,}, 1500 );
     $("#arrow_icon_div").delay(20000).animate({width: 290, opacity: 1,}, 1500 );
+    
     
     // COMMENTED OUT REGISTER BUTTON FLASHES FOR INDEX_TEMP ONLY (UN-COMMENT FOR FINAL PRODUCTION)
     // window.setInterval(function(){       
