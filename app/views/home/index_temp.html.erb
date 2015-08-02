@@ -58,8 +58,16 @@
     </h3>
     
   </div>
-  <div class="temp_bubble1"><h2> 7 days </h2><h4>until YarnBomb registration opens</h4></div>
-  <div class="temp_bubble2"><h2> 7 days </h2><h4>until YarnBomb registration opens</h4></div>
+  <div class="temp_bubble1">
+    <% end_date = "2015-08-09" %>
+    <h2><%= distance_of_time_in_words(Date.today, end_date)%></h2>
+    <h4>until YarnBomb registration opens</h4>
+  </div>
+  <div class="temp_bubble2">
+    <% end_date = "2015-08-09" %>
+    <h2><%= distance_of_time_in_words(Date.today, end_date)%></h2>
+    <h4>until YarnBomb registration opens</h4>
+  </div>
 </div> <!-- about_container -->
 <!-- SCENE II : END -->
 
