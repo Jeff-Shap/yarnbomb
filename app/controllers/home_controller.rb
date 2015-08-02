@@ -3,4 +3,6 @@ class HomeController < ApplicationController
   end
   def tutorial
   end
+  def index_temp
+  end
 end

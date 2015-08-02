@@ -3,6 +3,55 @@
   They will automatically be included in application.css.
 */
 
+
+
+
+
+
+/*TEMP_INDEX link deactivation (DELETE FOR FINAL PRODUCTION)*/
+.temp_index_deactivate > a {
+  pointer-events: none;
+}
+
+/*TEMP_INDEX INFO BUBBLE (DELETE FOR FINAL PRODUCTION)*/
+.temp_bubble 
+{
+position: relative;
+top: -780px;
+left: 66%;
+width: 450px;
+height: 100px;
+padding: 0px;
+background: rgba(110,70,45,0.6);
+border: 1px solid white;
+-webkit-border-radius: 32px;
+-moz-border-radius: 32px;
+border-radius: 32px;
+color: white;
+opacity: 0;
+}
+
+.temp_bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 32px;
+border-color: rgba(110,70,45,0.8) transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -32px;
+left: 350px;
+}
+/*END TEMP_INDEX*/
+
+
+
+
+
+
+
 /*SCENE I : BEGIN*/
 
 #logo_splash {

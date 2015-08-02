@@ -1,20 +1,27 @@
 
 
-var i = 1;                     //  set your counter to 1
+var i = 1;                     
 
- function myLoop () {           //  create a loop function
-   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+ function buttonFlash () {           
+   setTimeout(function () {    
       console.log('looping' + i);
-      $('#reg_button').toggleClass("flash");          //  your code here
-      i = i + 1;                     //  increment the counter
-      if (i < 10) {            //  if the counter < 10, call the loop function
-         myLoop();             //  ..  again which will trigger another 
-      }                        //  ..  setTimeout()
+      $('#reg_button').toggleClass("flash");          
+      i = i + 1;                     
+      if (i < 10) {            
+         myLoop();             
+      }                        
    }, 2000)
 }
 
 
  $(document).ready(function() {
+
+  // Added sign-in/register info bubbles (COMMENT OUT FOR FINAL PRODUCTION)
+  $('.temp_index_deactivate').click(function() {
+    console.log('click');
+    $('.temp_bubble').animate({opacity:1}, 1000);
+    $('.temp_bubble').delay(2000).animate({opacity:0}, 1000);
+  });
 
   $( "#logo_splash" ).delay(400).animate({
     opacity: 1.0,}, 1500 );
@@ -33,11 +40,11 @@ var i = 1;                     //  set your counter to 1
     $("#about_step3").delay(8500).animate({opacity: 1.0,}, 1500 );
     $("#about_footer").delay(17000).animate({opacity: 1.0,}, 1500 );
     $("#arrow_icon_div").delay(20000).animate({width: 290, opacity: 1,}, 1500 );
-    window.setInterval(function(){
-      myLoop();
-      }, 23000);
-
     
+    // COMMENTED OUT REGISTER BUTTON FLASHES FOR INDEX_TEMP ONLY (UN-COMMENT FOR FINAL PRODUCTION)
+    // window.setInterval(function(){       
+    //   buttonFlash();
+    //   }, 23000);
 
     });
 
