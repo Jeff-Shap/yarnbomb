@@ -139,10 +139,14 @@ left: 350px;
   border-radius: 50%;
   -webkit-shape-outside:circle();
   shape-outside:circle();
+  position: relative;
+  top: 20px;
 }
 
 #step1_text {
   text-align: right;
+  position: relative;
+  top: 15px;
 }
 
 #about_step2 {
@@ -152,6 +156,8 @@ left: 350px;
 #step2_pic {
   width: 150px;
   height: 150px;
+  position: relative;
+  top: 20px;
 }
 
 #step2_text {
@@ -169,10 +175,14 @@ left: 350px;
   border-radius: 50%;
   -webkit-shape-outside:circle();
   shape-outside:circle();
+  position: relative;
+  top: 30px;
 }
 
 #step3_text {
   text-align: left;
+  position: relative;
+  top: 25px;
 }
 
 #about_footer {

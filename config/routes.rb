@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     root :to => 'home#tutorial', as: :authenticated_root
   end
 
-  root 'home#index_temp'
+  root 'home#index'
   
   resources :projects
   
