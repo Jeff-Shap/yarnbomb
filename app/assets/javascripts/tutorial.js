@@ -104,7 +104,7 @@ $(document).ready(function() {
     
   });
 
-  function fnOpenNormalDialog() {
+  function fnConfirmTutExit() {
     $("#dialog-confirm").html("Whoa there, speedy...<br>Are you sure you want to move on before reading the brief introduction to each category?<br>This will be your only opportunity to do so.");
 
     // Define the Dialog and its properties.
@@ -127,21 +127,42 @@ $(document).ready(function() {
     });
 }
 
+function fnNewProjPage() {
+    $("#dialog-confirm").html("And we are off to the Projects page to enter your first project!");
+
+    // Define the Dialog and its properties.
+    $("#dialog-confirm").dialog({
+        resizable: false,
+        modal: true,
+        title: "Let's Add a New Project",
+        height: 250,
+        width: 400,
+        buttons: {
+            "To the Project Page": function () {
+                $(this).dialog('close');
+                callback(true);
+            },
+                
+        }
+    });
+}
+
 $('#btnOpenDialog').click(function() {
   if (y>=1 && p>=1 && r>=1) {
       console.log('redirecting to new project page');
+      fnNewProjPage();
     }
     else {
       console.log('you missed one');
-      fnOpenNormalDialog();
+      fnConfirmTutExit();
     }
   });
 
 function callback(value) {
     if (value) {
-        alert("Confirmed");
+        alert("To the New Project Page!");
     } else {
-        alert("Rejected");
+        alert("Back to Tutorial");
     }
 }
 
