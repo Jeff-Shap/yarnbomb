@@ -21,13 +21,17 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <% if notice %>
+            <p class="alert alert-success navbar-text" id="sign_in_success"><%= notice %></p>
+          <% end %>
         <% if alert %>
           <p class="alert alert-danger navbar-text" id="sign_in_fail"><%= alert %></p>
         <% end %>
         <% if user_signed_in? %>
-          <% if notice %>
-            <p class="alert alert-success navbar-text" id="sign_in_success"><%= notice %></p>
-          <% end %>
+        <button class="btn btn-default btn-sm yb_button navbar_button" type="button" id="yarn_nav_button"><%=image_tag "yarn_nav_icon.png", :class => "navbar_button_icon", :id => "yarn_nav_icon"%></button>
+        <button class="btn btn-default btn-sm yb_button navbar_button" type="button" id="proj_nav_button"><%=image_tag "newproject.ico", :class => "navbar_button_icon", :id => "proj_nav_icon"%></button>
+        <button class="btn btn-default btn-sm yb_button navbar_button" type="button" id="report_nav_button"><%=image_tag "report_nav_icon.png", :class => "navbar_button_icon", :id => "report_nav_icon"%></button>
+          
           <div class="btn-group" id="user_btn_group">
             <p class="navbar-text" id="logged_in_as">Logged in as</p>
             <button class="btn btn-default btn-sm dropdown-toggle yb_button" type="button" data-toggle="dropdown" id="user_button">

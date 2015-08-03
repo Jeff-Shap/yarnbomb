@@ -66,8 +66,6 @@ body {
   top: -10px;
 }
 
-
-
 #user_dropdown {
   position: absolute;
   left: 26%;
@@ -104,6 +102,32 @@ body {
 
 #user_dropdown > li > a:hover {
   background-color: transparent !important;
+}
+
+.navbar_button {
+  position: relative;
+  top: 6px;
+  left: -1%;
+  height: 50px;
+  width: 60px;
+  margin-left: 30px;
+}
+
+.navbar_button_icon {
+  height: 40px;
+  width: 40px;
+}
+
+#yarn_nav_icon {
+  height: 45px;
+  width: 45px;
+  position: relative;
+  left: -6%;
+}
+
+#report_nav_icon {
+  position: relative;
+  left: 8%;
 }
 
 .flash{

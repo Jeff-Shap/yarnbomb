@@ -92,6 +92,7 @@ $(document).ready(function() {
       $('#report_head > .popout').delay(2000).animate({opacity:1,}, 1000);
       $('#report_nav_locate_icon').delay(3000).animate({opacity:1}, 1000);
       
+      
     }
     else {
       $('#report_nav_locate_icon').animate({opacity:0,}, 1000);
@@ -105,10 +106,20 @@ $(document).ready(function() {
   r = r + 1;
   });
 
-  $('#btnOpenDialog').unbind('click').bind('click', function() {
-     console.log(y,p,r);
-    
-  });
+$('#yarn_nav_locate_icon').unbind('click').bind('click', function() {
+          console.log('locate yarn nav button');
+          $('#screen').css({ opacity: 0.7, 'width':$(document).width(),'height':$(document).height()});
+          $('body').css({'overflow':'hidden'});
+          $('#box').css({'display': 'block'});
+        });
+
+$('#proj_nav_locate_icon').unbind('click').bind('click', function() {
+          console.log('locate proj nav button');
+        });
+
+$('#report_nav_locate_icon').unbind('click').bind('click', function() {
+          console.log('locate report nav button');
+        });
 
   function fnConfirmTutExit() {
     $("#dialog-confirm").html("<br>Whoa there, speedy...<br><br>Are you sure you want to move on before reading the brief introduction to each navigation icon?<br><br>This will be your only opportunity to do so.");
