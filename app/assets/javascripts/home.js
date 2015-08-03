@@ -34,7 +34,7 @@ var i = 1;
     $('.temp_bubble1').stop();
     $('.temp_bubble1').animate({opacity:0}, 1);
     $('.temp_index_deactivate').unbind('click').bind('click',function() {
-      $('.temp_bubble1').animate({"top":"-630px"},1);
+      $('.temp_bubble1').animate({"top":"-660px"},1);
       $('.temp_bubble1').delay(100).animate({opacity:1}, 1000);
       $('.temp_bubble1').delay(2000).animate({opacity:0}, 1000);
     });
