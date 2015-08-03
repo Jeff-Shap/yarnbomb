@@ -58,7 +58,7 @@
 #scene2 {
   position: relative;
   left: 100%;
-  top: -650px;
+  top: -680px;
 }
 
 #tutorial_banner {
@@ -179,7 +179,7 @@
   top: 130px;
   text-align: center;
   font-size: 1.3em;
-
+  opacity: 0;
 }
 
 

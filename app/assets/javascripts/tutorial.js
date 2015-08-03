@@ -23,6 +23,7 @@ $(document).ready(function() {
       $('#proj_ex_icon').delay(9000).animate({opacity:1,});
       $('#report_ex_icon').delay(11000).animate({opacity:1,});
       $('#nav_ex_footer').delay(13000).animate({opacity:1,},500);
+      $('#next_step').delay(20000).animate({opacity:1,},500);
     },1);
 
     
@@ -98,7 +99,63 @@ $(document).ready(function() {
   r = r + 1;
   });
 
-  
+  $('#next_step').unbind('click').bind('click', function() {
+     console.log(y,p,r);
+    if (y>=1 && p>=1 && r>=1) {
+      console.log('redirecting to new project page');
+    }
+    else {
+      console.log('you missed one');
+      $(function() {
+        $( "#dialog" ).dialog({
+      resizable: false,
+      height:140,
+      modal: true,
+      buttons: {
+        "Delete all items": function() {
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+      });
+    }
+  });
+
+  function fnOpenNormalDialog() {
+    $("#dialog-confirm").html("Confirm Dialog Box");
+
+    // Define the Dialog and its properties.
+    $("#dialog-confirm").dialog({
+        resizable: false,
+        modal: true,
+        title: "Modal",
+        height: 250,
+        width: 400,
+        buttons: {
+            "Yes": function () {
+                $(this).dialog('close');
+                callback(true);
+            },
+                "No": function () {
+                $(this).dialog('close');
+                callback(false);
+            }
+        }
+    });
+}
+
+$('#btnOpenDialog').click(fnOpenNormalDialog);
+
+function callback(value) {
+    if (value) {
+        alert("Confirmed");
+    } else {
+        alert("Rejected");
+    }
+}
 
 
 
@@ -125,4 +182,6 @@ $(document).ready(function() {
 
 
 });
+
+
 
