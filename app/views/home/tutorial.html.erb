@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag "tutorial.css" %>
 <%= javascript_include_tag "tutorial.js" %>
-<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+<%= javascript_include_tag "customconfirm.js" %>
 <%= stylesheet_link_tag "customconfirm.css" %>
 
 
@@ -74,14 +74,13 @@
   </div>
   <div class="row" id="next_step">
     Ready to start? Let's set up your first Project!
-    <%= image_tag "arrowright.png", :class => 'next_tutorial_icon', :id => 'step_2_arrow'%>
+    
   </div>
 
-
-<input type="button" id="btnOpenDialog" value="Open Confirm Dialog" />
-<div id="dialog-confirm"></div>
-
+<%= button_tag "", :id => 'btnOpenDialog'%>
+<div id="dialog-confirm" title="test title" ></div>
 </div>
+
 
 
 
@@ -97,4 +96,8 @@
 
   $('#getstart_inside').delay(2500).animate({opacity:1,}, 2000);
 });
+
+
+  
+
 </script>
