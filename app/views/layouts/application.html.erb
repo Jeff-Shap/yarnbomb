@@ -21,24 +21,25 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <% if notice %>
-          <p class="alert alert-success navbar-text"><%= notice %></p>
-        <% end %>
         <% if alert %>
-          <p class="alert alert-danger navbar-text"><%= alert %></p>
+          <p class="alert alert-danger navbar-text" id="sign_in_fail"><%= alert %></p>
         <% end %>
         <% if user_signed_in? %>
-          <p class="navbar-text">Logged in as <strong><%= current_user.name %></strong></p>
-        <% end %>
-
-        <% if user_signed_in? %>
-          
-                    <%= link_to 'Edit profile',edit_user_registration_path, :class => 'navbar-link' %>
-        
-                    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
-                  </li>
-                </ul>
-              </li>
+          <% if notice %>
+            <p class="alert alert-success navbar-text" id="sign_in_success"><%= notice %></p>
+          <% end %>
+          <div class="btn-group" id="user_btn_group">
+            <p class="navbar-text" id="logged_in_as">Logged in as</p>
+            <button class="btn btn-default btn-sm dropdown-toggle yb_button" type="button" data-toggle="dropdown" id="user_button">
+              <%= current_user.name %><span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="user_dropdown">
+              <li><%= link_to 'Edit profile',edit_user_registration_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%></li>
+            </ul>
+          </div>
+        </ul>
+              
             
         <% else %>
         <li><button type="button" class="btn btn-default navbar-btn yb_button temp_index_deactivate">
@@ -55,6 +56,8 @@
   </nav>
 
   <%= yield %>
-
+<script>
+  $(".dropdown-toggle").dropdown();
+</script>
 </body>
 </html>

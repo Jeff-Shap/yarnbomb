@@ -43,9 +43,11 @@ $(document).ready(function() {
       $('#yarn_head').animate({"width":"80%",}, 1000);
       $('#yarn_head').animate({"top":"20px","height":"400px",}, 1000);
       $('#yarn_head > .popout').delay(2000).animate({opacity:1,}, 1000);
+      $('#yarn_nav_locate_icon').delay(3000).animate({opacity:1}, 1000);
       
     }
     else {
+      $('#yarn_nav_locate_icon').animate({opacity:0,}, 1000);
       $('#yarn_head > .popout').animate({opacity:0,}, 1000);
       $('#yarn_head').delay(1000).animate({"top":"150px","height":"0px",}, 1000);
       $('#yarn_head').animate({"width":"0%",}, 1000);
@@ -65,9 +67,11 @@ $(document).ready(function() {
       $('#proj_head').animate({"width":"80%",}, 1000);
       $('#proj_head').animate({"top":"20px","height":"400px",}, 1000);
       $('#proj_head > .popout').delay(2000).animate({opacity:1,}, 1000);
+      $('#proj_nav_locate_icon').delay(3000).animate({opacity:1}, 1000);
       
     }
     else {
+      $('#proj_nav_locate_icon').animate({opacity:0,}, 1000);
       $('#proj_head > .popout').animate({opacity:0,}, 1000);
       $('#proj_head').delay(1000).animate({"top":"150px","height":"0px",}, 1000);
       $('#proj_head').animate({"width":"0%",}, 1000);
@@ -86,9 +90,11 @@ $(document).ready(function() {
       $('#report_head').animate({"width":"80%",}, 1000);
       $('#report_head').animate({"top":"20px","height":"400px",}, 1000);
       $('#report_head > .popout').delay(2000).animate({opacity:1,}, 1000);
+      $('#report_nav_locate_icon').delay(3000).animate({opacity:1}, 1000);
       
     }
     else {
+      $('#report_nav_locate_icon').animate({opacity:0,}, 1000);
       $('#report_head > .popout').animate({opacity:0,}, 1000);
       $('#report_head').delay(1000).animate({"top":"150px","height":"0px",}, 1000);
       $('#report_head').animate({"width":"0%",}, 1000);
@@ -105,7 +111,7 @@ $(document).ready(function() {
   });
 
   function fnConfirmTutExit() {
-    $("#dialog-confirm").html("Whoa there, speedy...<br>Are you sure you want to move on before reading the brief introduction to each category?<br>This will be your only opportunity to do so.");
+    $("#dialog-confirm").html("<br>Whoa there, speedy...<br><br>Are you sure you want to move on before reading the brief introduction to each navigation icon?<br><br>This will be your only opportunity to do so.");
 
     // Define the Dialog and its properties.
     $("#dialog-confirm").dialog({
@@ -128,17 +134,17 @@ $(document).ready(function() {
 }
 
 function fnNewProjPage() {
-    $("#dialog-confirm").html("And we are off to the Projects page to enter your first project!");
+    $("#dialog-confirm").html("<br>To the Yarn page, it's time to begin!");
 
     // Define the Dialog and its properties.
     $("#dialog-confirm").dialog({
         resizable: false,
         modal: true,
-        title: "Let's Add a New Project",
+        title: "Add Yarn",
         height: 250,
         width: 400,
         buttons: {
-            "To the Project Page": function () {
+            "Yarn": function () {
                 $(this).dialog('close');
                 callback(true);
             },
@@ -149,20 +155,20 @@ function fnNewProjPage() {
 
 $('#btnOpenDialog').click(function() {
   if (y>=1 && p>=1 && r>=1) {
-      console.log('redirecting to new project page');
+      // console.log('redirecting to new yarn page');
       fnNewProjPage();
     }
     else {
-      console.log('you missed one');
+      // console.log('tut item missed');
       fnConfirmTutExit();
     }
   });
 
 function callback(value) {
     if (value) {
-        alert("To the New Project Page!");
+        alert("To New Yarn");
     } else {
-        alert("Back to Tutorial");
+        
     }
 }
 
@@ -191,6 +197,8 @@ function callback(value) {
 
 
 });
+
+
 
 
 

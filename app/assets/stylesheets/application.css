@@ -41,7 +41,70 @@ body {
   height: auto;
 }
 
+#user_button {
+  position: relative;
+  top: 9px;
+  height: 40px;
+  left: -10%;
+}
 
+#logged_in_as {
+  position: relative;
+  left: -5%;
+  top: 6px;
+}
+
+#sign_in_success {
+  position: absolute;
+  left: 42%;
+  top: -10px;
+}
+
+#sign_in_fail {
+  position: absolute;
+  left: 42%;
+  top: -10px;
+}
+
+
+
+#user_dropdown {
+  position: absolute;
+  left: 26%;
+  top: 50px;
+  width: 1%;
+  background-color: rgba(110,70,45,0.4);
+  border: 1px solid white;
+  min-width: 120px !important;
+  float: none !important;
+  z-index: 10000000000;
+}
+#user_dropdown > li {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#user_dropdown:hover {
+  background-color: rgba(110,70,45,0.6);
+}
+
+#user_dropdown > li:hover {
+  background-color: rgba(250,155,40,0.8) !important;
+  background-image: none;
+  border-radius: 5px; 
+}
+
+#user_dropdown > li > a {
+  color: white;
+  background-image: none !important;
+  padding-right: 5px;
+}
+
+#user_dropdown > li > a:hover {
+  background-color: transparent !important;
+}
 
 .flash{
 

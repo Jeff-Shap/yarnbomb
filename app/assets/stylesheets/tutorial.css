@@ -1,4 +1,25 @@
+.nav_locate_icon {
+  width: 20px;
+  height: auto;
+  float: right;
+  position: relative;
+  opacity: 0;
+}
 
+#yarn_nav_locate_icon {
+  left: -31%;
+  top: -8px;
+}
+
+#proj_nav_locate_icon {
+  left: -25%;
+  top: -8px;
+}
+
+#report_nav_locate_icon {
+  left: -27%;
+  top: -8px;
+} 
 
 
 .next_tutorial_icon {
