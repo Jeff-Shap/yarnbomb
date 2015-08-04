@@ -39,7 +39,7 @@
   </div>
   <div class="row" id="nav_ex_row">
 
-    <div class="col-md-4 navcolumn">
+    <div class="col-md-4 navcolumn" id="yarn_column">
       <div class="row">
         <%=image_tag "yarn_nav_icon.png", :class => "ex_nav_icon", :id => "yarn_ex_icon"%>
       </div>
@@ -48,11 +48,11 @@
         <p class="popout popout_desc">Add or edit your yarn inventory. Each entry is saved with a unique yarn "name" along with descriptive information including color, weight, gauge, and number of skeins. Each skein is saved with an estimated (or known) yardage. </p>
       </div>
       <div class="row nav_locate_row">
-        <%= image_tag "locateicon.png", :class => "nav_locate_icon", :id => "yarn_nav_locate_icon"%>
+        <%= image_tag "compass.png", :class => "nav_locate_icon", :id => "yarn_nav_locate_icon"%>
       </div>
     </div>
 
-    <div class="col-md-4 navcolumn">
+    <div class="col-md-4 navcolumn" id="proj_column">
       <div class="row">
         <%=image_tag "newproject.ico", :class => "ex_nav_icon", :id => "proj_ex_icon"%>
       </div>
@@ -61,11 +61,11 @@
         <p class="popout popout_desc">Add or edit your projects. Each project is saved with a unique name along with a description, estimated completion date, required yarns, and a completion status. </p>
       </div>
       <div class="row nav_locate_row">
-        <%= image_tag "locateicon.png", :class => "nav_locate_icon", :id => "proj_nav_locate_icon"%>
+        <%= image_tag "compass.png", :class => "nav_locate_icon", :id => "proj_nav_locate_icon"%>
       </div>
     </div>
 
-    <div class="col-md-4 navcolumn">
+    <div class="col-md-4 navcolumn" id="report_column">
       <div class="row">
         <%=image_tag "report_nav_icon.png", :class => "ex_nav_icon", :id => "report_ex_icon" %>
       </div>
@@ -74,7 +74,7 @@
         <p class="popout popout_desc">Create and download reports. Current inventory and project timeline reports will be provided, along with the ability to create custom reports to better fit your needs. Reports will be released as a new feature in YarnBomb v 2.0.<p>
       </div>
       <div class="row nav_locate_row">
-        <%= image_tag "locateicon.png", :class => "nav_locate_icon", :id => "report_nav_locate_icon"%>
+        <%= image_tag "compass.png", :class => "nav_locate_icon", :id => "report_nav_locate_icon"%>
       </div>
     </div>
   </div>
@@ -94,9 +94,18 @@
 
 
 <div class="container scene" id="greywindow">
-  <div class="window," id="yarn_window"></div>
-  <div class="window," id="proj_window"></div>
-  <div class="window," id="report_window"></div>
+  <div class="row">
+    <div class="window," id="logo_nav_window"></div>
+    <div class="window," id="yarn_nav_window"></div>
+    <div class="window," id="proj_nav_window"></div>
+    <div class="window," id="report_nav_window"></div>
+  </div>
+  <div class="row">
+    <div class="window col-md-4" id="yarn_column_window" style="margin-left:5%;"></div>
+    <div class="window col-md-4" id="proj_column_window" style="margin-left:5%;"></div>
+    <div class="window col-md-4" id="report_column_window" style="margin-left:5%;"></div>
+  </div>
+  
 </div>
 
 

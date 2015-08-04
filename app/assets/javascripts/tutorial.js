@@ -47,7 +47,7 @@ $(document).ready(function() {
       
     }
     else {
-      $('#yarn_nav_locate_icon').animate({opacity:0,}, 1000);
+      $('#yarn_nav_locate_icon').stop(true).animate({opacity:0,}, 1000);
       $('#yarn_head > .popout').animate({opacity:0,}, 1000);
       $('#yarn_head').delay(1000).animate({"top":"150px","height":"0px",}, 1000);
       $('#yarn_head').animate({"width":"0%",}, 1000);
@@ -71,7 +71,7 @@ $(document).ready(function() {
       
     }
     else {
-      $('#proj_nav_locate_icon').animate({opacity:0,}, 1000);
+      $('#proj_nav_locate_icon').stop(true).animate({opacity:0,}, 1000);
       $('#proj_head > .popout').animate({opacity:0,}, 1000);
       $('#proj_head').delay(1000).animate({"top":"150px","height":"0px",}, 1000);
       $('#proj_head').animate({"width":"0%",}, 1000);
@@ -95,7 +95,7 @@ $(document).ready(function() {
       
     }
     else {
-      $('#report_nav_locate_icon').animate({opacity:0,}, 1000);
+      $('#report_nav_locate_icon').stop(true).animate({opacity:0,}, 1000);
       $('#report_head > .popout').animate({opacity:0,}, 1000);
       $('#report_head').delay(1000).animate({"top":"150px","height":"0px",}, 1000);
       $('#report_head').animate({"width":"0%",}, 1000);
@@ -106,19 +106,55 @@ $(document).ready(function() {
   r = r + 1;
   });
 
-$('#yarn_nav_locate_icon').unbind('click').bind('click', function() {
-          console.log('locate yarn nav button');
-          $('#screen').css({ opacity: 0.7, 'width':$(document).width(),'height':$(document).height()});
-          $('body').css({'overflow':'hidden'});
-          $('#box').css({'display': 'block'});
+$('#yarn_nav_locate_icon').click(function() {
+          $('#yarn_column').css({"z-index":"1000000000"});
+          $('#greywindow').animate({"opacity":"1"}, 800);
+          $('#yarn_nav_window').css({"border":"3px solid white"});
+          $('#yarn_column_window').css({"background-color":"transparent"});
+          $('#proj_nav_button, #report_nav_button, #logo_nav_button, #user_button, #proj_column, #report_column').animate({"opacity":"0.3"},800);
+          $('#yarn_nav_window').delay(2000).addClass('flash');
+          window.setTimeout(function() {
+            $('#proj_nav_button, #report_nav_button, #logo_nav_button, #user_button, #proj_column, #report_column').animate({"opacity":"1"},800);
+            $('#greywindow').animate({"opacity":"0"}, 800);
+            $('#yarn_nav_window').removeClass('flash');
+        }, 5000);
+          window.setTimeout(function() {
+            $('#yarn_nav_window').css({"border":"none"});
+          }, 6000);
         });
 
 $('#proj_nav_locate_icon').unbind('click').bind('click', function() {
-          console.log('locate proj nav button');
+         $('#proj_column').css({"z-index":"1000000000"});
+          $('#greywindow').animate({"opacity":"1"}, 800);
+          $('#proj_nav_window').css({"background-color":"rgba(255,255,255,0)", "border":"3px solid white"});
+          $('#proj_column_window').css({"background-color":"transparent"});
+          $('#yarn_nav_button, #report_nav_button, #logo_nav_button, #user_button, #yarn_column, #report_column').animate({"opacity":"0.3"},800);
+          $('#proj_nav_window').delay(2000).addClass('flash');
+          window.setTimeout(function() {
+            $('#yarn_nav_button, #report_nav_button, #logo_nav_button, #user_button, #yarn_column, #report_column').animate({"opacity":"1"},800);
+            $('#greywindow').animate({"opacity":"0"}, 800);
+            $('#proj_nav_window').removeClass('flash');
+        }, 5000);
+          window.setTimeout(function() {
+            $('#proj_nav_window').css({"border":"none"});
+          }, 6000);
         });
 
 $('#report_nav_locate_icon').unbind('click').bind('click', function() {
-          console.log('locate report nav button');
+          $('#report_column').css({"z-index":"1000000000"});
+          $('#greywindow').animate({"opacity":"1"}, 800);
+          $('#report_nav_window').css({"background-color":"rgba(255,255,255,0)", "border":"3px solid white"});
+          $('#report_column_window').css({"background-color":"transparent"});
+          $('#yarn_nav_button, #proj_nav_button, #logo_nav_button, #user_button, #yarn_column, #proj_column').animate({"opacity":"0.3"},800);
+          $('#report_nav_window').delay(2000).addClass('flash');
+          window.setTimeout(function() {
+            $('#yarn_nav_button, #proj_nav_button, #logo_nav_button, #user_button, #yarn_column, #proj_column').animate({"opacity":"1"},800);
+            $('#greywindow').animate({"opacity":"0"}, 800);
+            $('#report_nav_window').removeClass('flash');
+        }, 5000);
+          window.setTimeout(function() {
+            $('#report_nav_window').css({"border":"none"});
+          }, 6000);
         });
 
   function fnConfirmTutExit() {

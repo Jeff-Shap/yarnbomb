@@ -1,10 +1,11 @@
 .nav_locate_icon {
-  width: 30px;
+  width: 50px;
   height: auto;
   float: right;
   position: relative;
   opacity: 0;
-  top: -8px;
+  top: -24px;
+  left: 46%;
 
 }
 
@@ -147,12 +148,12 @@
 }
 
 .popout_desc {
-  top: 210px !important;
+  top: 190px !important;
   font-size: 1.3em;
 }
 
 #proj_head > .popout_desc {
-  top: 230px !important;
+  top: 210px !important;
 }
 
 .category_header > p {
@@ -240,36 +241,74 @@
 
 #greywindow {
   position: relative;
-  left: 200%;
   top: -1350px;
   height: 800px;
   width: 100%;
-  border: 1px solid red;
-  background-color: rgba(75,75,75,0.5);
+  background-color: rgba(75,75,75,0.7);
+  opacity: 0;
+  z-index: -100;
 }
 
-#yarn_window {
-  width: 70px;
+#logo_nav_window {
+  width: 100px;
   height: 60px;
-  background-color: white;
+  z-index: 1000000;
   position: relative;
-  left: 69%;
 }
 
-#proj_window {
-  width: 70px;
+#yarn_nav_window {
+  width: 72px;
   height: 60px;
-  background-color: white;
+  z-index: 1000000;
   position: relative;
-  left: 75.8%;
   top: -60px;
+  left: 68.57%;
+  border-radius: 5px;
 }
 
-#report_window {
+#yarn_column_window {
+  height: 400px;
+  width: 23.6%;
+  float: left;
+  left: 1.5%;
+  top: 14px;
+  background-color: transparent;
+}
+
+#proj_nav_window {
   width: 70px;
   height: 60px;
-  background-color: white;
+  z-index: 1000000;
   position: relative;
-  left: 82.5%;
+  left: 75.25%;
   top: -120px;
+  border-radius: 5px;
+}
+
+#proj_column_window {
+  height: 400px;
+  width: 23.6%;
+  float: left;
+  left: 4.6%;
+  top: 13px;
+  background-color: transparent;
+}
+
+#report_nav_window {
+  width: 70px;
+  height: 60px;
+  z-index: 1000000;
+  position: relative;
+  left: 81.85%;
+  top: -180px;
+  border-radius: 5px;
+}
+
+#report_column_window {
+ height: 400px;
+ width: 23.6%;
+ float: left;
+ left: 7.72%;
+ top: 14px;
+ background-color: transparent;
 }
