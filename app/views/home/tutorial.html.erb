@@ -114,13 +114,17 @@
 
 <script type="text/javascript">
   window.setTimeout(function() {
+    $('#sign_in_success').css({"display":"none",});
+  }, 4000);
   
   $('#thanks_banner').animate({width: 400, "left":"5%",}, 2000);
   
   $('#getstart_banner').delay(2000).animate({width: 500, "right":"-35%",}, 2000);
 
   $('#getstart_inside').delay(2500).animate({opacity:1,}, 2000);
-});
+
+  $('#sign_in_success').delay(3000).animate({opacity:0,},1000);
+
 
 
   

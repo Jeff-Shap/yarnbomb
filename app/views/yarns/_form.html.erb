@@ -10,24 +10,63 @@
       </ul>
     </div>
   <% end %>
+<div class="container" id="yarn_form_container">
+  <div class="row"> 
+    <div class="col-sm-5 yarn_form_column" id="yarn_form" >
+      <div class="row yarn_form_field_row" id="yarn_form_name_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_name_label_column">
+          <%= f.label :name, "Name: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_name_field_column">
+          <%= f.text_field :name %>
+        </div>
+      </div>
+      <div class="row yarn_form_field_row" id="yarn_form_color_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_color_label_column">
+          <%= f.label :color, "Color: "%>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_color_field_column">
+          <%= f.text_field :color %>
+        </div>
+      </div>
+      <div class="row yarn_form_field_row" id="yarn_form_weight_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_weight_label_column">
+          <%= f.label :weight, "Weight: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_weight_field_column">
+          <%= f.text_field :weight %>
+        </div>
+      </div>
+      <div class="row yarn_form_field_row" id="yarn_form_gauge_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_gauge_label_column">
+          <%= f.label :gauge, "Gauge: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_gauge_field_column">
+          <%= f.text_field :gauge %>
+        </div>
+      </div>
+      <div class="row yarn_form_field_row" id="yarn_form_submit_row">
+        <div class="col-sm-4" id="submit_column">
+          <%= f.submit %>
+        </div>
+          
+      </div>
+    </div>
+    <div class="col-sm-5 yarn_form_column" id="cat_yarn_gif_column" >
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="image_window">
+            
+          </div>
+        </div>
+      </div>
+      
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
-  </div>
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :gauge %><br>
-    <%= f.text_field :gauge %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+
+
+
+  
 <% end %>

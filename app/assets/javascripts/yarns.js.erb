@@ -1,0 +1,22 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+
+// $(document).ready(function() {
+//   $('#catyarn_pic').mouseenter(function() {
+//     console.log('enter');
+//     $(this).css({"z-index":"-1"});
+//     $('#catyarn_gif').css({"z-index":"100"});
+//   });
+// });
+
+$(document).ready(function() {
+
+  $('#image_window').mouseenter(function() {
+    $(this).css({"background-image":"url(<%= asset_path 'catyarn_slow.gif' %>)"});
+  });
+
+  $('#image_window').mouseleave(function() {
+    $(this).css({"background-image":"url(<%= asset_path 'catyarn_first.jpg' %>)"});
+  });
+
+});
