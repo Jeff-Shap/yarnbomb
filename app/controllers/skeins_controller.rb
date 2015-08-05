@@ -1,5 +1,6 @@
 class SkeinsController < ApplicationController
   before_action :set_skein, only: [:show, :edit, :update, :destroy]
+  attr_accessor :length
 
   # GET /skeins
   # GET /skeins.json
@@ -24,6 +25,7 @@ class SkeinsController < ApplicationController
   # POST /skeins
   # POST /skeins.json
   def create
+    
     @skein = Skein.new(skein_params)
 
     respond_to do |format|

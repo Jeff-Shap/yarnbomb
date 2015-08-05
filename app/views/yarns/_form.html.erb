@@ -53,14 +53,32 @@
           <%= f.number_field :num_of_skeins, :value => 1, :min => 1, :max => 10 %>
         </div>
       </div>
+
+
+      
+      <div class="row yarn_form_field_row" id="yarn_form_skein_form">
+        <%= fields_for :skein, @yarn.skeins do |skein| %>
+        <div class="col-sm-4 yarn_form_label_column" id="skein_form_label_column">
+          <%= skein.label :length %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="skein_form_field_column">
+        <%= skein.number_field :length %>
+        </div>
+      <% end %>
+      
+    </div>
+        
+      
+      
       <div class="row yarn_form_field_row" id="yarn_form_submit_row">
         <div class="col-sm-4" id="submit_column">
           <%= f.submit %>
         </div>
           
       </div>
+      
     </div>
-    <div class="col-sm-5 yarn_form_column" id="cat_yarn_gif_column" >
+  <!--   <div class="col-sm-5 yarn_form_column" id="cat_yarn_gif_column" >
       <div class="row">
         <div class="col-sm-12">
           <div id="image_window">
@@ -70,7 +88,7 @@
       </div>
       
 
-    </div>
+    </div> -->
   </div>
 </div>
 

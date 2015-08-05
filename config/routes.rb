@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :skeins
+  
   resources :skeins
   devise_for :users
   authenticated :user do
