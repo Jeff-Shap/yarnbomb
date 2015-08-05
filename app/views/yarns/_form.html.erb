@@ -45,6 +45,14 @@
           <%= f.text_field :gauge %>
         </div>
       </div>
+      <div class="row yarn_form_field_row" id="yarn_form_skeins_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_skeins_label_column">
+          <%= f.label :num_of_skeins, "# of Skeins: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_skeins_field_column">
+          <%= f.number_field :num_of_skeins, :value => 1, :min => 1, :max => 10 %>
+        </div>
+      </div>
       <div class="row yarn_form_field_row" id="yarn_form_submit_row">
         <div class="col-sm-4" id="submit_column">
           <%= f.submit %>

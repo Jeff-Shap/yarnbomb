@@ -75,6 +75,6 @@ class YarnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def yarn_params
-      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id)
+      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id, :num_of_skeins)
     end
 end
