@@ -8,3 +8,6 @@ Coming soon, the world's most comprehensive inventory app for yarn enthusiasts.
 
 * Create custom inventory Alerts and Reports (YarnBomb v 2.0)
 
+==NOTES
+
+* Current attempt = yarn.save -> pass yarn_id & #_of_skeins through url -> parse url at skein.new -> iterate through skein.new <parsed> number of times for yarn_id =<parsed>
