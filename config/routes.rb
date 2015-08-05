@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :skeins
   devise_for :users
   authenticated :user do
     root :to => 'home#tutorial', as: :authenticated_root

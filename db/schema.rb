@@ -25,16 +25,6 @@ ActiveRecord::Schema.define(version: 20150805001509) do
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
-  create_table "skeins", force: :cascade do |t|
-    t.integer  "yardage"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "yarn_id"
-    t.integer  "length"
-  end
-
-  add_index "skeins", ["yarn_id"], name: "index_skeins_on_yarn_id", using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -68,6 +58,5 @@ ActiveRecord::Schema.define(version: 20150805001509) do
   add_index "yarns", ["user_id"], name: "index_yarns_on_user_id", using: :btree
 
   add_foreign_key "projects", "users"
-  add_foreign_key "skeins", "yarns"
   add_foreign_key "yarns", "users"
 end
