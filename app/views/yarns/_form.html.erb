@@ -58,15 +58,14 @@
       
       <div class="row yarn_form_field_row" id="yarn_form_skein_form">
         <%= fields_for :skein, @yarn.skeins do |skein| %>
-        <div class="col-sm-4 yarn_form_label_column" id="skein_form_label_column">
-          <%= skein.label :length %>
-        </div>
-        <div class="col-sm-6 yarn_form_field_column" id="skein_form_field_column">
-        <%= skein.number_field :length %>
-        </div>
-      <% end %>
-      
-    </div>
+          <div class="col-sm-4 yarn_form_label_column" id="skein_form_label_column">
+            <%= skein.label :length %>
+          </div>
+          <div class="col-sm-6 yarn_form_field_column" id="skein_form_field_column">
+            <%= skein.number_field :length %>
+          </div>
+        <% end %>
+      </div>
         
       
       

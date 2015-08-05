@@ -37,7 +37,6 @@ class YarnsController < ApplicationController
     #set user_id in attr = current user
     attrs[:user_id] = current_user.id
     @yarn = Yarn.new(attrs)
-    
     respond_to do |format|
       if @yarn.save
         yarn_id = @yarn[:id]
