@@ -33,17 +33,17 @@ class YarnsController < ApplicationController
   def create
     #clone yarn params (in private) to attrs var
     attrs = yarn_params().clone
-    skein_attrs = skein_params().clone
+    # skein_attrs = skein_params().clone
     #set user_id in attr = current user
     attrs[:user_id] = current_user.id
     @yarn = Yarn.new(attrs)
     respond_to do |format|
       if @yarn.save
         yarn_id = @yarn[:id]
-        skein_attrs[:yarn_id] = yarn_id
-        @skein = Skein.new(skein_attrs)
-        @skein.save
-        format.html { redirect_to url_for :controller => 'skeins', :action => 'new', notice: 'Yarn was successfully created.' }
+        # skein_attrs[:yarn_id] = yarn_id
+        # @skein = Skein.new(skein_attrs)
+        # @skein.save
+        format.html { redirect_to url_for :controller => 'skeins', :action => 'new', yarn_id: yarn_id, skeins: @yarn[:num_of_skeins] }
         format.json { render :show, status: :created, location: @yarn }
       else
         format.html { render :new }

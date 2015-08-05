@@ -1,6 +1,7 @@
 class SkeinsController < ApplicationController
   before_action :set_skein, only: [:show, :edit, :update, :destroy]
   attr_accessor :length
+  require "cgi"
 
   # GET /skeins
   # GET /skeins.json
@@ -16,6 +17,9 @@ class SkeinsController < ApplicationController
   # GET /skeins/new
   def new
     @skein = Skein.new
+    test = CGI.parse(URI.parse(request.original_url).query)
+    puts "TEST #{test}"
+
   end
 
   # GET /skeins/1/edit
@@ -27,7 +31,6 @@ class SkeinsController < ApplicationController
   def create
     
     @skein = Skein.new(skein_params)
-
     respond_to do |format|
       if @skein.save
         format.html { redirect_to @skein, notice: 'Skein was successfully created.' }
