@@ -11,3 +11,5 @@ Coming soon, the world's most comprehensive inventory app for yarn enthusiasts.
 ==NOTES
 
 * Current attempt = yarn.save -> pass yarn_id & #_of_skeins through url -> parse url at skein.new -> iterate through skein.new <parsed> number of times for yarn_id =<parsed>
+
+* yarn.save -> pass skein # / lengths to controller via form, create Skein.new instances in controller

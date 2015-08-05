@@ -1,7 +1,8 @@
 class YarnsController < ApplicationController
   before_action :set_yarn, only: [:show, :edit, :update, :destroy]
-  attr_accessor :skein, :length
-
+  
+  
+  
 
   
 
@@ -19,7 +20,8 @@ class YarnsController < ApplicationController
   # GET /yarns/new
   def new
     @yarn = Yarn.new
-    @skein = Skein.new
+    # @skein = Skein.new
+    # @skein2 = Skein.new
   end
 
   # GET /yarns/1/edit
@@ -31,18 +33,54 @@ class YarnsController < ApplicationController
   
 
   def create
+    
     #clone yarn params (in private) to attrs var
-    attrs = yarn_params().clone
-    # skein_attrs = skein_params().clone
+    form_data = params().clone
+    attrs2 = yarn_params().clone
     #set user_id in attr = current user
-    attrs[:user_id] = current_user.id
-    @yarn = Yarn.new(attrs)
+    attrs2[:user_id] = current_user.id
+    @yarn = Yarn.new(attrs2)
+    
+    @new_skein_lengths = [form_data[:yarn][:skein_1_length], form_data[:yarn][:skein_2_length], form_data[:yarn][:skein_3_length], form_data[:yarn][:skein_4_length], form_data[:yarn][:skein_5_length]]
+
+    @skein_num = form_data[:yarn][:num_of_skeins]
+
     respond_to do |format|
       if @yarn.save
         yarn_id = @yarn[:id]
-        # skein_attrs[:yarn_id] = yarn_id
-        # @skein = Skein.new(skein_attrs)
-        # @skein.save
+        skein_attrs = {}
+        skein_attrs[:yarn_id] = yarn_id
+        i = 0
+          (@skein_num).to_i.times do |x|
+            @skein = Skein.new(skein_attrs)
+            @skein[:length] = @new_skein_lengths["#{i}".to_i]
+            puts "SKEIN #{i} saved, length: #{@skein[:length]}"
+            i = i + 1
+            @skein.save
+            
+          end
+
+          # @skein1 = Skein.new(skein_attrs)
+          #   @skein1[:length] = @skein_1_length
+          #   puts "SKEIN 1 PRE SAVE: #{@skein1}"
+          # @skein1.save
+          # @skein2 = Skein.new(skein_attrs)
+          #   @skein2[:length] = @skein_2_length
+          #   puts "SKEIN 2 PRE SAVE: #{@skein2}"
+          # @skein2.save
+          # @skein3 = Skein.new(skein_attrs)
+          #   @skein3[:length] = @skein_3_length
+          #   puts "SKEIN 3 PRE SAVE: #{@skein3}"
+          # @skein3.save
+          # @skein4 = Skein.new(skein_attrs)
+          #   @skein4[:length] = @skein_4_length
+          #   puts "SKEIN 4 PRE SAVE: #{@skein4}"
+          # @skein4.save
+          # @skein5 = Skein.new(skein_attrs)
+          #   @skein5[:length] = @skein_5_length
+          #   puts "SKEIN 5 PRE SAVE: #{@skein5}"
+          # @skein5.save
+
         format.html { redirect_to url_for :controller => 'skeins', :action => 'new', yarn_id: yarn_id, skeins: @yarn[:num_of_skeins] }
         format.json { render :show, status: :created, location: @yarn }
       else
@@ -84,7 +122,8 @@ class YarnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def yarn_params
-      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id, :num_of_skeins)
+      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id)
+      # MAY NEED TO ADD ABOVE - skeins_attributes: [:length]
     end
 
     def skein_params

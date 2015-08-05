@@ -50,11 +50,56 @@
           <%= f.label :num_of_skeins, "# of Skeins: " %>
         </div>
         <div class="col-sm-6 yarn_form_field_column" id="yarn_skeins_field_column">
-          <%= f.number_field :num_of_skeins, :value => 1, :min => 1, :max => 10 %>
+          <%= f.number_field :num_of_skeins, :value => 1, :min => 1, :max => 5 %>
+        </div>
+      </div>
+      
+      <div class="row yarn_form_field_row", id="yarn_form_skein1_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_skein1_label_column">
+          <%= f.label :skein_1_length, "Skein 1 Length: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_skein1_field_column">
+          <%= f.number_field :skein_1_length, :value => 0 %>
         </div>
       </div>
 
-<!-- <div class="row yarn_form_field_row" id="yarn_form_skein_form">
+      <div class="row yarn_form_field_row", id="yarn_form_skein2_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_skein2_label_column">
+          <%= f.label :skein_2_length, "Skein 2 Length: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_skein2_field_column">
+          <%= f.number_field :skein_2_length, :value => 0 %>
+        </div>
+      </div>
+
+      <div class="row yarn_form_field_row", id="yarn_form_skein3_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_skein3_label_column">
+          <%= f.label :skein_3_length, "Skein 3 Length: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_skein3_field_column">
+          <%= f.number_field :skein_3_length, :value => 0 %>
+        </div>
+      </div>
+
+      <div class="row yarn_form_field_row", id="yarn_form_skein4_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_skein4_label_column">
+          <%= f.label :skein_4_length, "Skein 4 Length: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_skein4_field_column">
+          <%= f.number_field :skein_4_length, :value => 0 %>
+        </div>
+      </div>
+
+      <div class="row yarn_form_field_row", id="yarn_form_skein5_row">
+        <div class="col-sm-4 yarn_form_label_column" id="yarn_skein5_label_column">
+          <%= f.label :skein_5_length, "Skein 5 Length: " %>
+        </div>
+        <div class="col-sm-6 yarn_form_field_column" id="yarn_skein5_field_column">
+          <%= f.number_field :skein_5_length, :value => 0 %>
+        </div>
+      </div>
+
+   <!-- <div class="row yarn_form_field_row" id="yarn_form_skein_form">
         <%= fields_for :skein, @yarn.skeins do |skein| %>
           <div class="col-sm-4 yarn_form_label_column" id="skein_form_label_column">
             <%= skein.label :length, "Length: " %>
@@ -63,8 +108,9 @@
             <%= skein.number_field :length %>
           </div>
         <% end %>
-      </div>
-       -->
+      </div> -->
+
+      
      
         
       
@@ -92,15 +138,6 @@
 </div>
 
 
-<!-- <div class="container-fluid">
-<div class="row," id="skein_pop">
-  <div id="skein_pop_inner">
-    <h3 id="skein_pop_header">SKEIN #</h3>
-    <%= render :partial => 'skeins/form', :locals=>{:f=>f}  %>
-  </div>
-</div>
-</div>
- -->
 
   
 <% end %>
