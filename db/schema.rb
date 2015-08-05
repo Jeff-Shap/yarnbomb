@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 20150805005500) do
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
-
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
