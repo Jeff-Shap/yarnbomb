@@ -20,22 +20,15 @@ $(document).ready(function() {
   });
 
   $('#yarn_num_of_skeins').change(function() {
-    console.log('start');
     
-    console.log('step 2');
-    var num_of_skeins_to_add = $(this).val();
-    var current_num_of_skein_fields = $('.skein_row').length
-    var num_of_skeins_to_clone = num_of_skeins_to_add - current_num_of_skein_fields
-    $clone = $('#skein').clone();
-      
-      if (num_of_skeins_to_clone == 0 ) {
-      }
-      else if (num_of_skeins_to_clone >= 1) {
-        clone div num_of_skeins_to_clone times
-      }
-      else {
-        remove div -(num_of_skeins_to_clone) times
-      }
+    
+    var num_of_skeins_to_add = $(this).val()
+    var current_num_of_skein_fields = ($('.skein_row').length - 1);
+    var num_of_skeins_to_clone = (num_of_skeins_to_add - current_num_of_skein_fields);
+    var skein_div_clone = $('#skein_template').clone();
+    skein_div_clone.attr("id", "test_div");
+    skein_div_clone.css({"visibility":"visible"});
+    skein_div_clone.appendTo("#yarn_form");
 
         
 
@@ -48,5 +41,6 @@ $(document).ready(function() {
 
     // };
   });
+
 });
 
