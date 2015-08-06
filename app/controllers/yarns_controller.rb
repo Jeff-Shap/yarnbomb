@@ -88,7 +88,7 @@ class YarnsController < ApplicationController
           #   puts "SKEIN 5 PRE SAVE: #{@skein5}"
           # @skein5.save
 
-        format.html { redirect_to url_for :controller => 'skeins', :action => 'new', yarn_id: yarn_id, skeins: @yarn[:num_of_skeins] }
+        format.html { redirect_to yarns_path, :notice => 'Yarns and Skeins sucessfully created' }
         format.json { render :show, status: :created, location: @yarn }
       else
         format.html { render :new }
@@ -129,7 +129,7 @@ class YarnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def yarn_params
-      params.permit(:name, :color, :weight, :gauge, :user_id)
+      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id)
       # MAY NEED TO ADD ABOVE - skeins_attributes: [:length]
     end
 

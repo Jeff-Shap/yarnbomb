@@ -33,7 +33,7 @@ class SkeinsController < ApplicationController
     @skein = Skein.new(skein_params)
     respond_to do |format|
       if @skein.save
-        format.html { redirect_to @skein, notice: 'Skein was successfully created.' }
+        format.html { redirect_to :controller => 'yarns', :action => 'index', notice: 'Skein was successfully created.' }
         format.json { render :show, status: :created, location: @skein }
       else
         format.html { render :new }
