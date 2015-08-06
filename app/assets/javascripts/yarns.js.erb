@@ -44,6 +44,7 @@ $(document).ready(function() {
         skein_div_clone.css({"visibility":"visible"});
         console.log(skein_div_clone.appendTo("#yarn_form"));
         $('#yarn_form_container input:last').attr("id", "skein_row_field" + (temp_id));
+        $('#yarn_form_container input:last').attr("name", "skein_lengths["+temp_id+"]");
         temp_id = temp_id + 1;
         console.log("after temp_id = " + temp_id);
         i = i - 1

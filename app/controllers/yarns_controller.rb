@@ -1,6 +1,6 @@
 class YarnsController < ApplicationController
   before_action :set_yarn, only: [:show, :edit, :update, :destroy]
-  
+  attr_accessor :skein_length
   
   
 
@@ -41,23 +41,29 @@ class YarnsController < ApplicationController
     attrs2[:user_id] = current_user.id
     @yarn = Yarn.new(attrs2)
     
-    @new_skein_lengths = form_data
-    puts "TEST TEST: #{@new_skein_lengths}"
-    @skein_num = form_data[:yarn][:num_of_skeins]
-
+    @array_stop_point = ((form_data[:skein_lengths].length * 2) - 1)
+    @skein_lengths = []
+    @skein_lengths << form_data[:skein_lengths].values
+    @skein_lengths = @skein_lengths.flatten
     respond_to do |format|
       if @yarn.save
         yarn_id = @yarn[:id]
         skein_attrs = {:yarn_id => yarn_id, :length => 0}
+        @skein_lengths.each do |x|
+          @skein = Skein.new(skein_attrs)
+          @skein[:length] = x
+          @skein.save
+          puts "SKEIN saved, length: #{x}"
+        end
         
         
-          @new_skein_lengths.each do |x|
-            @skein = Skein.new(skein_attrs)
-            @skein[:length] = x
-            puts "SKEIN saved, length: #{x}"
-            # i = i + 1
-            @skein.save
-          end
+          # @new_skein_lengths.each do |x|
+          #   @skein = Skein.new(skein_attrs)
+          #   @skein[:length] = x
+          #   puts "SKEIN saved, length: #{x}"
+          #   # i = i + 1
+          #   @skein.save
+          # end
             
         
 
@@ -123,7 +129,7 @@ class YarnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def yarn_params
-      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id)
+      params.require(:yarn).permit(:name, :color, :weight, :gauge, :user_id, :num_of_skeins)
       # MAY NEED TO ADD ABOVE - skeins_attributes: [:length]
     end
 
