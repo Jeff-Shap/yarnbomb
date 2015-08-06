@@ -41,24 +41,25 @@ class YarnsController < ApplicationController
     attrs2[:user_id] = current_user.id
     @yarn = Yarn.new(attrs2)
     
-    @new_skein_lengths = [form_data[:yarn][:skein_1_length], form_data[:yarn][:skein_2_length], form_data[:yarn][:skein_3_length], form_data[:yarn][:skein_4_length], form_data[:yarn][:skein_5_length]]
-
+    @new_skein_lengths = form_data
+    puts "TEST TEST: #{@new_skein_lengths}"
     @skein_num = form_data[:yarn][:num_of_skeins]
 
     respond_to do |format|
       if @yarn.save
         yarn_id = @yarn[:id]
-        skein_attrs = {}
-        skein_attrs[:yarn_id] = yarn_id
-        i = 0
-          (@skein_num).to_i.times do |x|
+        skein_attrs = {:yarn_id => yarn_id, :length => 0}
+        
+        
+          @new_skein_lengths.each do |x|
             @skein = Skein.new(skein_attrs)
-            @skein[:length] = @new_skein_lengths["#{i}".to_i]
-            puts "SKEIN #{i} saved, length: #{@skein[:length]}"
-            i = i + 1
+            @skein[:length] = x
+            puts "SKEIN saved, length: #{x}"
+            # i = i + 1
             @skein.save
-            
           end
+            
+        
 
           # @skein1 = Skein.new(skein_attrs)
           #   @skein1[:length] = @skein_1_length

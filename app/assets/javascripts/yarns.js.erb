@@ -30,18 +30,20 @@ $(document).ready(function() {
     if (num_of_skeins_to_clone > 0) {
       i = num_of_skeins_to_clone
       temp_id = current_num_of_skein_fields + 1;
+      var current2 = ($('.skein_row').length - 1);
       while (i > 0) {
         var skein_div_clone = $('#skein_template').clone();
         console.log("add div");
-        
         console.log("i = " + i);
         console.log("before temp_id = " + temp_id);
         console.log("current_num_of_skein_fields = " + current_num_of_skein_fields);
         console.log("num_of_skeins_to_clone = " + num_of_skeins_to_clone);
+        $("label[for='yarn_skein_length']:first").html("Skein "+(temp_id + 1)+" length: ");
+        
         skein_div_clone.attr("id", "skein_row" + temp_id);
-        $("label[for='yarn_skein_length']").html("Skein "+ (temp_id - 1) +" length: ");
         skein_div_clone.css({"visibility":"visible"});
         console.log(skein_div_clone.appendTo("#yarn_form"));
+        $('#yarn_form_container input:last').attr("id", "skein_row_field" + (temp_id));
         temp_id = temp_id + 1;
         console.log("after temp_id = " + temp_id);
         i = i - 1
@@ -49,12 +51,15 @@ $(document).ready(function() {
     }
     else if (num_of_skeins_to_clone < 0) {
       i = num_of_skeins_to_clone
-      temp_id = current_num_of_skein_fields - 1;
-      while (i <= 0) {
+      temp_id = current_num_of_skein_fields;
+      while (i < 0) {
       console.log('input = ' + input_number);
+      console.log('current_num_of_skein_fields =' +current_num_of_skein_fields);
+      console.log("num_of_skeins_to_clone = " + num_of_skeins_to_clone);
       console.log('remove div');
       console.log("i = " + i);
       console.log("temp_id = " + temp_id);
+      $("label[for='yarn_skein_length']:first").html("Skein "+(temp_id)+" length: ");
       $("#skein_row"+temp_id).remove();
       i = i + 1;
       temp_id = temp_id -1;
