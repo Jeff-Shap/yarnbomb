@@ -39,12 +39,11 @@ $(document).ready(function() {
         console.log("current_num_of_skein_fields = " + current_num_of_skein_fields);
         console.log("num_of_skeins_to_clone = " + num_of_skeins_to_clone);
         $("label[for='yarn_skein_length']:first").html("Skein "+(temp_id + 1)+" length: ");
-        
         skein_div_clone.attr("id", "skein_row" + temp_id);
         skein_div_clone.css({"visibility":"visible"});
-        console.log(skein_div_clone.appendTo("#yarn_form"));
-        $('#yarn_form_container input:last').attr("id", "skein_row_field" + (temp_id));
-        $('#yarn_form_container input:last').attr("name", "skein_lengths["+temp_id+"]");
+        console.log(skein_div_clone.insertBefore("#yarn_form_submit_row"));
+        $('.skein_row input:last').attr("id", "skein_row_field" + (temp_id));
+        $('.skein_row input:last').attr("name", "skein_lengths[" + (temp_id) + "]");
         temp_id = temp_id + 1;
         console.log("after temp_id = " + temp_id);
         i = i - 1
