@@ -1,6 +1,9 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
+
+
+// BEGIN: Cat GIF controller
 // $(document).ready(function() {
 //   $('#catyarn_pic').mouseenter(function() {
 //     console.log('enter');
@@ -8,9 +11,11 @@
 //     $('#catyarn_gif').css({"z-index":"100"});
 //   });
 // });
+// END: Cat GIF controller
 
 $(document).ready(function() {
 
+  // BEGIN: Cat GIF controller
   $('#image_window').mouseenter(function() {
     $(this).css({"background-image":"url(<%= asset_path 'catyarn_slow.gif' %>)"});
   });
@@ -18,15 +23,22 @@ $(document).ready(function() {
   $('#image_window').mouseleave(function() {
     $(this).css({"background-image":"url(<%= asset_path 'catyarn_first.jpg' %>)"});
   });
+  // END: Cat GIF controller
 
+
+  // BEGIN: Skein form field controller
   $('input[type=number]').unbind('change').bind('change', function() {
     
-    
+    // User input in # of Skeins field
     var input_number = $(this).val()
+
+    // Skein fields already displayed (-1 to neutralize the template)
     var current_num_of_skein_fields = ($('.skein_row').length - 1);
+
+    // Skein fields needed to match User input
     var num_of_skeins_to_clone = (input_number - current_num_of_skein_fields);
     
-    
+    // Add skein fields (as needed, to match User input)
     if (num_of_skeins_to_clone > 0) {
       i = num_of_skeins_to_clone
       temp_id = current_num_of_skein_fields + 1;
@@ -47,8 +59,10 @@ $(document).ready(function() {
         temp_id = temp_id + 1;
         console.log("after temp_id = " + temp_id);
         i = i - 1
-      }
-    }
+      }  //while loop
+    }   //if loop
+
+    // Remove skein fields (as needed, to match User input
     else if (num_of_skeins_to_clone < 0) {
       i = num_of_skeins_to_clone
       temp_id = current_num_of_skein_fields;
@@ -63,22 +77,10 @@ $(document).ready(function() {
       $("#skein_row"+temp_id).remove();
       i = i + 1;
       temp_id = temp_id -1;
-    }
-    //   i = num_of_skeins_to_clone
-    //   while (i < 0) {
-    //   }
-    }
-       
-
-
-
-    // $('.skein_row').clone().appendTo("#yarn_form_container > .row > #yarn_form");
-    // $('.skein_row').css({"visibility":"visible"});
-    
-    // for (i = 1; i<= num_of_skeins_to_add; i++) {
-
-    // };
+      }   //while loop
+    }    //else if loop
   });
+    // END: Skein form field controller
 
 });
 

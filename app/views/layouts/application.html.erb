@@ -10,8 +10,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 
+<!-- BEGIN: Landing background color change -->
 <body data-0="background: radial-gradient(circle, rgb(250,155,40), rgb(250,230,30), rgb(250,155,40));" data-140="background: radial-gradient(circle, rgb(250,230,30), rgb(250,155,40), rgb(250,230,30));" >
+<!-- END: Landing background color change -->
 
+
+<!-- BEGIN: Navbar -->
   <nav class="navbar navbar-default navbar-fixed-top" id="navnav">
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-left">
@@ -21,12 +25,17 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+
+        <!-- BEGIN: Login/logout alerts -->
         <% if notice %>
             <p class="alert alert-success navbar-text" id="sign_in_success"><%= notice %></p>
           <% end %>
         <% if alert %>
           <p class="alert alert-danger navbar-text" id="sign_in_fail"><%= alert %></p>
         <% end %>
+        <!-- END: Login/logout alerts -->
+
+        <!-- BEGIN: Authenticated user navbar options -->
         <% if user_signed_in? %>
         <button class="btn btn-default btn-sm yb_button navbar_button" type="button" id="yarn_nav_button"><%=image_tag "yarn_nav_icon.png", :class => "navbar_button_icon", :id => "yarn_nav_icon"%></button>
         <button class="btn btn-default btn-sm yb_button navbar_button" type="button" id="proj_nav_button"><%=image_tag "newproject.ico", :class => "navbar_button_icon", :id => "proj_nav_icon"%></button>
@@ -43,8 +52,9 @@
             </ul>
           </div>
         </ul>
+        <!-- END: Authenticated user navbar options -->
               
-            
+        <!-- BEGIN: Non-authenticated navbar options    -->
         <% else %>
         <li><button type="button" class="btn btn-default navbar-btn yb_button temp_index_deactivate">
             <%= link_to "Sign In", new_user_session_path %>
@@ -53,6 +63,7 @@
           <li><button type="button" class="btn btn-default navbar-btn yb_button temp_index_deactivate" id="reg_button">
             <%= link_to "Register", new_user_registration_path %></button>
           </li>
+        <!-- END: Non-authenticated navbar options -->
           
         <% end %>
       </ul>
@@ -60,8 +71,15 @@
   </nav>
 
   <%= yield %>
+
+<!-- BEGIN: Embedded JS to control navbar dropdowns -->
 <script>
   $(".dropdown-toggle").dropdown();
 </script>
+<!-- END: Embedded JS to control navbar dropdowns -->
+
+
 </body>
+
+
 </html>

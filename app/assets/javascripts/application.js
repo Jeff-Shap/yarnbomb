@@ -18,8 +18,9 @@
 
 $(document).ready(function() {
 
+
+    // BEGIN: User navbar dropdown
     $('#user_dropdown').mouseleave(function() {
-      console.log('mouse leave detected');
       $(this).animate({opacity:0}, 3000);
       var t = setTimeout(function() {
         $('#user_btn_group').removeClass('open');
@@ -33,6 +34,7 @@ $(document).ready(function() {
     });
 
   });
+  // END: User navbar dropdown
     
 });
 
