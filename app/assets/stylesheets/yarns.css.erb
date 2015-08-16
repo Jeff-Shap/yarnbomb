@@ -26,15 +26,17 @@
 #submit_column {
   padding-left: 2px;
   width: 29%;
-  left: 54%;
+  left: 90%;
+}
+
+#catgif_column {
+  position: relative;
+  top: 20px;
 }
 
 #image_window {
   border: 1px solid white;
   height: 220px;
-  width: 80%;
-  position: relative;
-  left: -10%;
   background-image: url(<%= asset_path 'catyarn_first.jpg'%>);
   background-size: cover;
 }
@@ -42,5 +44,18 @@
 .skein_row {
   visibility: hidden;
   position: relative;
-  top: -50px;
+  top: -35px;
+}
+
+.skein_row > div.col-sm-6 {
+  position: relative;
+  left: 3.4%;
+}
+
+.skein_row > div.col-sm-6 > div.row > input[type=number] {
+  width: 60px;
+}
+
+.unit_meas {
+  font-size: 0.9em;
 }

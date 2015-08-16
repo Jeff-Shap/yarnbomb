@@ -50,7 +50,7 @@ $(document).ready(function() {
         console.log("before temp_id = " + temp_id);
         console.log("current_num_of_skein_fields = " + current_num_of_skein_fields);
         console.log("num_of_skeins_to_clone = " + num_of_skeins_to_clone);
-        $("label[for='yarn_skein_length']:first").html("Skein "+(temp_id + 1)+" length: ");
+        $("label[for='yarn_skein_length']:first").html("Skein "+(temp_id + 1)+": ");
         skein_div_clone.attr("id", "skein_row" + temp_id);
         skein_div_clone.css({"visibility":"visible"});
         console.log(skein_div_clone.insertBefore("#yarn_form_submit_row"));

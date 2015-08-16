@@ -26,10 +26,6 @@ $(document).ready(function() {
       $('#next_step, #btnOpenDialog').delay(20000).animate({opacity:1,},500);
     },1);
 
-    
-    
-
-
 
   });
 
